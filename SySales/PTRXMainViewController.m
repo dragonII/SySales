@@ -10,6 +10,7 @@
 #import "PTRXWizardViewController.h"
 #import "PTRXLoginViewController.h"
 #import "PTRXContentNavigationViewController.h"
+#import "PTRXClientsTabsController.h"
 
 @interface PTRXMainViewController ()
 
