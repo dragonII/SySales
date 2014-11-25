@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aYU-70-udF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="AND-Bi-LYF">
+            <objects>
+                <viewController id="aYU-70-udF" customClass="PTRXMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jyv-x9-5bL"/>
+                        <viewControllerLayoutGuide type="bottom" id="TBp-QJ-qNT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nBb-oL-vxl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gkt-zU-eQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="267"/>
+        </scene>
+        <!--Wizard View Controller-->
+        <scene sceneID="N8l-Hv-fRP">
+            <objects>
+                <viewController storyboardIdentifier="Wizard" id="mWd-FU-s3I" customClass="PTRXWizardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YfV-eU-v5u"/>
+                        <viewControllerLayoutGuide type="bottom" id="Af0-uz-AE0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nWV-Xz-Ks7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OI-pO-fYb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Smt-gT-BCS">
+                                <rect key="frame" x="0.0" y="531" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Smt-gT-BCS" firstAttribute="leading" secondItem="nWV-Xz-Ks7" secondAttribute="leading" id="8f4-3r-oWx"/>
+                            <constraint firstItem="Af0-uz-AE0" firstAttribute="top" secondItem="Smt-gT-BCS" secondAttribute="bottom" id="94E-V6-rl4"/>
+                            <constraint firstItem="Af0-uz-AE0" firstAttribute="top" secondItem="3OI-pO-fYb" secondAttribute="bottom" id="EN1-pd-xih"/>
+                            <constraint firstAttribute="trailing" secondItem="Smt-gT-BCS" secondAttribute="trailing" id="WFC-tI-gph"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="Smt-gT-BCS" id="48B-Vr-4NS"/>
+                        <outlet property="scrollView" destination="3OI-pO-fYb" id="xUD-4m-yZM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Val-Yh-EGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="964"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="xZY-4n-u7J">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="olY-nH-m0y" customClass="PTRXLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x4A-Xk-0HK"/>
+                        <viewControllerLayoutGuide type="bottom" id="otB-uX-77g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q8O-uD-XmU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="syslivelogo" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-lg-kzX">
+                                <rect key="frame" x="50" y="57" width="220" height="97"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-j7-YhS">
+                                <rect key="frame" x="60" y="162" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-mY-tHb">
+                                <rect key="frame" x="60" y="200" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89a-YN-aPG">
+                                <rect key="frame" x="60" y="238" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="登录" backgroundImage="LoginButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="olY-nH-m0y" eventType="touchUpInside" id="eXW-T7-r9k"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EWd-mo-RRX">
+                                <rect key="frame" x="150" y="288" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="89a-YN-aPG" id="IXz-81-zoC"/>
+                        <outlet property="nameTextField" destination="M0t-j7-YhS" id="5mc-Me-pnP"/>
+                        <outlet property="passwdTextField" destination="YLw-mY-tHb" id="rdY-bV-HWi"/>
+                        <outlet property="spinner" destination="EWd-mo-RRX" id="3Am-xv-1aq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wxJ-MD-P9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="964"/>
+        </scene>
+        <!--Content Navigation View Controller-->
+        <scene sceneID="cci-cD-DGR">
+            <objects>
+                <viewController storyboardIdentifier="ContentNavigation" id="2nV-Gg-L3c" customClass="PTRXContentNavigationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EGY-qg-gZS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hq6-kS-RbB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Uq-0V-2CW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZrK-50-K3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255" y="964"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LoginButton" width="11" height="24"/>
+        <image name="syslivelogo" width="443" height="221"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

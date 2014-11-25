@@ -13,14 +13,17 @@
 		2F824F9C1A2448F900C037B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F824F9A1A2448F900C037B6 /* InfoPlist.strings */; };
 		2F824F9E1A2448F900C037B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824F9D1A2448F900C037B6 /* main.m */; };
 		2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */; };
-		2F824FA51A2448F900C037B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FA31A2448F900C037B6 /* Main.storyboard */; };
-		2F824FA81A2448F900C037B6 /* PTRXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FA71A2448F900C037B6 /* PTRXViewController.m */; };
 		2F824FAA1A2448F900C037B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FA91A2448F900C037B6 /* Images.xcassets */; };
 		2F824FB11A2448F900C037B6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824FB01A2448F900C037B6 /* XCTest.framework */; };
 		2F824FB21A2448F900C037B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F911A2448F800C037B6 /* Foundation.framework */; };
 		2F824FB31A2448F900C037B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F951A2448F800C037B6 /* UIKit.framework */; };
 		2F824FBB1A2448F900C037B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FB91A2448F900C037B6 /* InfoPlist.strings */; };
 		2F824FBD1A2448F900C037B6 /* SySalesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FBC1A2448F900C037B6 /* SySalesTests.m */; };
+		2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FC61A24498600C037B6 /* MainView.storyboard */; };
+		2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */; };
+		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
+		2F824FD21A2449C500C037B6 /* PTRXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */; };
+		2F824FD31A2449C500C037B6 /* PTRXContentNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +47,21 @@
 		2F824F9F1A2448F900C037B6 /* SySales-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SySales-Prefix.pch"; sourceTree = "<group>"; };
 		2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTRXAppDelegate.h; sourceTree = "<group>"; };
 		2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTRXAppDelegate.m; sourceTree = "<group>"; };
-		2F824FA41A2448F900C037B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2F824FA61A2448F900C037B6 /* PTRXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTRXViewController.h; sourceTree = "<group>"; };
-		2F824FA71A2448F900C037B6 /* PTRXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTRXViewController.m; sourceTree = "<group>"; };
 		2F824FA91A2448F900C037B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F824FAF1A2448F900C037B6 /* SySalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SySalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F824FB01A2448F900C037B6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2F824FB81A2448F900C037B6 /* SySalesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SySalesTests-Info.plist"; sourceTree = "<group>"; };
 		2F824FBA1A2448F900C037B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F824FBC1A2448F900C037B6 /* SySalesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SySalesTests.m; sourceTree = "<group>"; };
+		2F824FC61A24498600C037B6 /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		2F824FC81A2449C500C037B6 /* PTRXWizardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXWizardViewController.h; sourceTree = "<group>"; };
+		2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXWizardViewController.m; sourceTree = "<group>"; };
+		2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXLoginViewController.h; sourceTree = "<group>"; };
+		2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXLoginViewController.m; sourceTree = "<group>"; };
+		2F824FCC1A2449C500C037B6 /* PTRXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainViewController.h; sourceTree = "<group>"; };
+		2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainViewController.m; sourceTree = "<group>"; };
+		2F824FCE1A2449C500C037B6 /* PTRXContentNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXContentNavigationViewController.h; sourceTree = "<group>"; };
+		2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXContentNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +123,15 @@
 			children = (
 				2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */,
 				2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */,
-				2F824FA31A2448F900C037B6 /* Main.storyboard */,
-				2F824FA61A2448F900C037B6 /* PTRXViewController.h */,
-				2F824FA71A2448F900C037B6 /* PTRXViewController.m */,
+				2F824FC81A2449C500C037B6 /* PTRXWizardViewController.h */,
+				2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */,
+				2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */,
+				2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */,
+				2F824FCC1A2449C500C037B6 /* PTRXMainViewController.h */,
+				2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */,
+				2F824FCE1A2449C500C037B6 /* PTRXContentNavigationViewController.h */,
+				2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */,
+				2F824FC61A24498600C037B6 /* MainView.storyboard */,
 				2F824FA91A2448F900C037B6 /* Images.xcassets */,
 				2F824F981A2448F900C037B6 /* Supporting Files */,
 			);
@@ -230,8 +245,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F824FAA1A2448F900C037B6 /* Images.xcassets in Resources */,
+				2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */,
 				2F824F9C1A2448F900C037B6 /* InfoPlist.strings in Resources */,
-				2F824FA51A2448F900C037B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,
-				2F824FA81A2448F900C037B6 /* PTRXViewController.m in Sources */,
 				2F824F9E1A2448F900C037B6 /* main.m in Sources */,
+				2F824FD31A2449C500C037B6 /* PTRXContentNavigationViewController.m in Sources */,
+				2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */,
+				2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */,
+				2F824FD21A2449C500C037B6 /* PTRXMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +299,6 @@
 				2F824F9B1A2448F900C037B6 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2F824FA31A2448F900C037B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F824FA41A2448F900C037B6 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2F824FB91A2448F900C037B6 /* InfoPlist.strings */ = {
