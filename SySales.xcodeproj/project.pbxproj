@@ -24,6 +24,7 @@
 		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
 		2F824FD21A2449C500C037B6 /* PTRXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */; };
 		2F824FD31A2449C500C037B6 /* PTRXContentNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */; };
+		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,9 @@
 		2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainViewController.m; sourceTree = "<group>"; };
 		2F824FCE1A2449C500C037B6 /* PTRXContentNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXContentNavigationViewController.h; sourceTree = "<group>"; };
 		2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXContentNavigationViewController.m; sourceTree = "<group>"; };
+		2FB07B8A1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		2FB07B8B1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		2F824F981A2448F900C037B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */,
 				2F824F991A2448F900C037B6 /* SySales-Info.plist */,
 				2F824F9A1A2448F900C037B6 /* InfoPlist.strings */,
 				2F824F9D1A2448F900C037B6 /* main.m */,
@@ -227,6 +232,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 2F824F851A2448F800C037B6;
 			productRefGroup = 2F824F8F1A2448F800C037B6 /* Products */;
@@ -245,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F824FAA1A2448F900C037B6 /* Images.xcassets in Resources */,
+				2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */,
 				2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */,
 				2F824F9C1A2448F900C037B6 /* InfoPlist.strings in Resources */,
 			);
@@ -297,6 +304,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2F824F9B1A2448F900C037B6 /* en */,
+				2FB07B8A1A245D8E00A5E3F8 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2F824FBA1A2448F900C037B6 /* en */,
+				2FB07B8B1A245D8E00A5E3F8 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -471,6 +480,7 @@
 				2F824FC21A2448F900C037B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F824FC31A2448F900C037B6 /* Build configuration list for PBXNativeTarget "SySalesTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +489,7 @@
 				2F824FC51A2448F900C037B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
