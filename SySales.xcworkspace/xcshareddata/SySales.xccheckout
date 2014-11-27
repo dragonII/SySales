@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>255A4811-6107-4877-9572-B7C6F5B213AA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SySales</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>078C3F73010C7A12B1C261345954E4CB532D3D13</key>
+		<string>https://github.com/dragonII/SySales.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SySales.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>078C3F73010C7A12B1C261345954E4CB532D3D13</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dragonII/SySales.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>078C3F73010C7A12B1C261345954E4CB532D3D13</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>078C3F73010C7A12B1C261345954E4CB532D3D13</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SySales</string>
+		</dict>
+	</array>
+</dict>
+</plist>
