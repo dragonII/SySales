@@ -10,6 +10,8 @@
 #import "PTRXMainViewController.h"
 #import "PTRXContentNavigationViewController.h"
 
+#import <AFNetworking/AFNetworking.h>
+
 @interface PTRXLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwdTextField;
@@ -51,7 +53,41 @@
     [self.nameTextField resignFirstResponder];
     [self.passwdTextField resignFirstResponder];
     
-    [self performLogin];
+    //[self performLogin];
+    //[self testLogin];
+    [self postLogin];
+}
+
+- (void)getXML
+{
+    NSString *URLString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
+    NSDictionary *dict = @{@"USERNAME": @"999", @"PASSWORD": @"123456"};
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    //manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    [manager POST:URLString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"POST --> %@", responseObject);
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
+- (void) postLogin
+{
+    NSString *URLString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    NSDictionary *dict = @{@"USERNAME": @"666", @"PASSWORD": @"123"};
+    
+    [manager POST:URLString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"POST --> %@", responseObject);
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 - (void)performLogin
