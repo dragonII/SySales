@@ -12,11 +12,18 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-@interface PTRXLoginViewController ()
+@interface PTRXLoginViewController () <NSXMLParserDelegate>
+
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwdTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+
+@property (strong, nonatomic) NSMutableDictionary *xmlContent;
+@property (strong, nonatomic) NSString *elementName;
+@property (strong, nonatomic) NSMutableString *outString;
+@property (strong, nonatomic) NSMutableDictionary *currentDictionary;
+
 - (IBAction)loginPressed:(UIButton *)sender;
 
 @end
@@ -79,12 +86,21 @@
 {
     NSString *URLString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
     NSDictionary *dict = @{@"USERNAME": @"666", @"PASSWORD": @"123"};
     
     [manager POST:URLString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"POST --> %@", responseObject);
+        /*
+        NSXMLParser *xmlParser = (NSXMLParser *)responseObject;
+        [xmlParser setShouldProcessNamespaces:YES];
+        NSLog(@"POST --> %@", xmlParser);
+        xmlParser.delegate = self;
+        [xmlParser parse];
+         */
     }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
@@ -146,6 +162,38 @@
 - (void)dealloc
 {
     NSLog(@"dealloc: %@", self);
+}
+
+- (void)parserDidStartDocument:(NSXMLParser *)parser
+{
+    NSLog(@"Did Start Document");
+    self.xmlContent = [NSMutableDictionary dictionary];
+}
+
+- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
+{
+    self.elementName = qName;
+    NSLog(@"Start Element: %@", qName);
+    self.currentDictionary = [NSMutableDictionary dictionary];
+    self.outString = [NSMutableString string];
+}
+
+- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
+{
+    if(!self.elementName)
+        return;
+    NSLog(@"Found Characters: %@", string);
+    [self.outString appendFormat:@"%@", string];
+}
+
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
+{
+    NSLog(@"End Element: %@", qName);
+}
+
+- (void)parserDidEndDocument:(NSXMLParser *)parser
+{
+    NSLog(@"End Document");
 }
 
 @end

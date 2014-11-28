@@ -11,6 +11,7 @@
 #import "PTRXLoginViewController.h"
 #import "PTRXContentNavigationViewController.h"
 #import "PTRXClientsTabsController.h"
+#import "PTRXDataPersistence.h"
 
 @interface PTRXMainViewController ()
 
@@ -31,9 +32,18 @@
 {
     [super viewDidLoad];
     
-    self.wizardController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wizard"];
-    self.wizardController.mainController = self;
-    [self.view insertSubview:self.wizardController.view atIndex:0];
+    NSString *firstLaunch = [PTRXDataPersistence getFirstLaunchValue];
+    
+    if([firstLaunch isEqualToString:@"YES"])
+    {
+        self.wizardController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wizard"];
+        self.wizardController.mainController = self;
+        [self.view insertSubview:self.wizardController.view atIndex:0];
+    } else {
+        self.loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        self.loginController.mainController = self;
+        [self.view insertSubview:self.loginController.view atIndex:0];
+    }
 }
 
 
