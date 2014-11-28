@@ -60,9 +60,9 @@
     [self.nameTextField resignFirstResponder];
     [self.passwdTextField resignFirstResponder];
     
-    //[self performLogin];
+    [self performLogin];
     //[self testLogin];
-    [self postLogin];
+    //[self postLogin];
 }
 
 - (void)getXML
@@ -155,7 +155,7 @@
 
 - (BOOL)loginToServer
 {
-    [NSThread sleepForTimeInterval:2];
+    [NSThread sleepForTimeInterval:1];
     return YES;
 }
 

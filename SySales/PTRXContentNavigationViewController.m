@@ -8,7 +8,7 @@
 
 #import "PTRXContentNavigationViewController.h"
 #import "PTRXMainViewController.h"
-//#import "PTRXClientsTabViewController.m"
+#import "PTRXClientsTabsController.h"
 
 @interface PTRXContentNavigationViewController ()
 
@@ -99,7 +99,7 @@
                 w = itemWidth * 2;
                 h = itemHeight;
                 [button setTitle:NSLocalizedString(@"Clients", @"Entry name for clients") forState:UIControlStateNormal];
-                [button addTarget:self action:@selector(moveToClientsController:) forControlEvents:UIControlEventTouchUpInside];
+                [button addTarget:self action:@selector(moveToClientsTabsController:) forControlEvents:UIControlEventTouchUpInside];
                 break;
             case 1:
                 x = margin;
@@ -165,10 +165,18 @@
     }
 }
 
-- (IBAction)moveToClientsController:(id)sender
+- (IBAction)moveToClientsTabsController:(id)sender
 {
     
     NSLog(@"Clients button pressed");
+    
+    if(self.mainController.clientsTabsController == nil)
+    {
+        self.mainController.clientsTabsController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ClientsTabs"];
+        self.mainController.clientsTabsController.mainController = self.mainController;
+    }
+    [self.view removeFromSuperview];
+    [self.mainController.view insertSubview:self.mainController.clientsTabsController.view atIndex:0];
     
     /*
     if(self.mainController.clientTabsController == nil)
