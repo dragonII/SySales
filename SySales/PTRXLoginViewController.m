@@ -87,20 +87,20 @@
     NSString *URLString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
-    NSDictionary *dict = @{@"USERNAME": @"666", @"PASSWORD": @"123"};
+    NSDictionary *dict = @{@"user": @"666", @"password": @"123"};
     
     [manager POST:URLString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"POST --> %@", responseObject);
-        /*
+        
         NSXMLParser *xmlParser = (NSXMLParser *)responseObject;
         [xmlParser setShouldProcessNamespaces:YES];
         NSLog(@"POST --> %@", xmlParser);
         xmlParser.delegate = self;
         [xmlParser parse];
-         */
+        
     }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
@@ -180,9 +180,9 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
 {
+    NSLog(@"Found Characters: %@", string);
     if(!self.elementName)
         return;
-    NSLog(@"Found Characters: %@", string);
     [self.outString appendFormat:@"%@", string];
 }
 

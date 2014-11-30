@@ -11,6 +11,16 @@
 #import "PTRXClientsTabsController.h"
 
 @interface PTRXContentNavigationViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *topImageView;
+@property (weak, nonatomic) IBOutlet UIButton *button1;
+@property (weak, nonatomic) IBOutlet UIButton *button2;
+@property (weak, nonatomic) IBOutlet UIButton *button3;
+@property (weak, nonatomic) IBOutlet UIButton *button4;
+@property (weak, nonatomic) IBOutlet UIButton *button5;
+@property (weak, nonatomic) IBOutlet UIButton *button6;
+@property (weak, nonatomic) IBOutlet UIButton *button7;
+@property (weak, nonatomic) IBOutlet UIButton *button8;
+@property (weak, nonatomic) IBOutlet UIButton *button9;
 
 @end
 
@@ -35,8 +45,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     NSLog(@"viewWillAppear");
-    self.view.backgroundColor = [UIColor blackColor];
-    [self initContentNavigationButtons];
+    self.view.backgroundColor = [UIColor whiteColor];
+    //[self initContentNavigationButtons];
 }
 
 /*
@@ -56,6 +66,7 @@
  |       |    |    |
  +-------+----+----+
  */
+
 
 - (void)initContentNavigationButtons
 {
@@ -163,6 +174,12 @@
         //NSLog(@"Button %d: %f, %f, %f, %f", butIndex, x, y, w, h);
         [self.view addSubview:button];
     }
+}
+
+- (IBAction)moveToClientsTabsController_new:(id)sender
+{
+    //通过sender（也就是button）的tag值来判断点击的是什么按钮，同时根据这个值进行webView中load的URL值的判断
+    //可以将所有的URL值hardcode在代码里，或者以后可以通过webservice的方式从服务器获得，目前使用hardcode方式
 }
 
 - (IBAction)moveToClientsTabsController:(id)sender
