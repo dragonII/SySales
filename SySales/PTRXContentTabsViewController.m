@@ -1,19 +1,18 @@
 //
-//  PTRXClientsTabsController.m
+//  PTRXContentTabsViewController.m
 //  SySales
 //
-//  Created by Wang Long on 11/25/14.
+//  Created by Wang Long on 11/30/14.
 //  Copyright (c) 2014 Wang Long. All rights reserved.
 //
 
-#import "PTRXClientsTabsController.h"
-#import "PTRXMainViewController.h"
+#import "PTRXContentTabsViewController.h"
 
-@interface PTRXClientsTabsController ()
+@interface PTRXContentTabsViewController ()
 
 @end
 
-@implementation PTRXClientsTabsController
+@implementation PTRXContentTabsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

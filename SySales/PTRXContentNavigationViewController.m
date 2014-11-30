@@ -8,7 +8,8 @@
 
 #import "PTRXContentNavigationViewController.h"
 #import "PTRXMainViewController.h"
-#import "PTRXClientsTabsController.h"
+#import "PTRXContentTabsViewController.h"
+#import "PTRXParameterFromContentNavigationToTabs.h"
 
 @interface PTRXContentNavigationViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *topImageView;
@@ -47,6 +48,7 @@
     NSLog(@"viewWillAppear");
     self.view.backgroundColor = [UIColor whiteColor];
     //[self initContentNavigationButtons];
+    [self addActionsToButtons];
 }
 
 /*
@@ -66,6 +68,45 @@
  |       |    |    |
  +-------+----+----+
  */
+
+- (void)addActionsToButtons
+{
+    for(int i = 2001; i <= 2009; i++)
+    {
+        UIButton *button = (UIButton *)[self.view viewWithTag:i];
+        [button addTarget:self action:@selector(navigationButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+- (IBAction)navigationButtonClicked:(id)sender
+{
+    UIButton *button = (UIButton *)sender;
+    NSLog(@"Button %@ clicked", button.titleLabel.text);
+    
+    if(self.mainController.contentTabsController == nil)
+    {
+        self.mainController.contentTabsController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentTabs"];
+        self.mainController.contentTabsController.mainController = self.mainController;
+    }
+    
+    NSInteger tag = button.tag;
+    PTRXParameterFromContentNavigationToTabs *parameter = [PTRXParameterFromContentNavigationToTabs sharedParameter];
+    switch (tag)
+    {
+        // 客户
+        case 2001:
+            parameter.barButtonOneName = NSLocalizedString(@"Clients", @"Clients");
+            parameter.barButtonTwoName = NSLocalizedString(@"Contacts", @"Contacts");
+            parameter.urlStringForWebView = @"http://scs3.syslive.cn/mb/customer/customerlist.ds";
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self.view removeFromSuperview];
+    [self.mainController.view insertSubview:self.mainController.contentTabsController.view atIndex:0];
+}
 
 
 - (void)initContentNavigationButtons
@@ -187,13 +228,13 @@
     
     NSLog(@"Clients button pressed");
     
-    if(self.mainController.clientsTabsController == nil)
+    if(self.mainController.contentTabsController == nil)
     {
-        self.mainController.clientsTabsController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ClientsTabs"];
-        self.mainController.clientsTabsController.mainController = self.mainController;
+        self.mainController.contentTabsController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentTabs"];
+        self.mainController.contentTabsController.mainController = self.mainController;
     }
     [self.view removeFromSuperview];
-    [self.mainController.view insertSubview:self.mainController.clientsTabsController.view atIndex:0];
+    [self.mainController.view insertSubview:self.mainController.contentTabsController.view atIndex:0];
     
     /*
     if(self.mainController.clientTabsController == nil)

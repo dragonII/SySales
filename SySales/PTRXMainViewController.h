@@ -11,13 +11,13 @@
 @class PTRXLoginViewController;
 @class PTRXWizardViewController;
 @class PTRXContentNavigationViewController;
-@class PTRXClientsTabsController;
+@class PTRXContentTabsViewController;
 
 @interface PTRXMainViewController : UIViewController
 
 @property (strong, nonatomic) PTRXLoginViewController *loginController;
 @property (strong, nonatomic) PTRXWizardViewController *wizardController;
 @property (strong, nonatomic) PTRXContentNavigationViewController *contentNVController;
-@property (strong, nonatomic) PTRXClientsTabsController *clientsTabsController;
+@property (strong, nonatomic) PTRXContentTabsViewController *contentTabsController;
 
 @end

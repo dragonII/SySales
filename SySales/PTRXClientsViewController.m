@@ -7,11 +7,14 @@
 //
 
 #import "PTRXClientsViewController.h"
+#import "PTRXMainViewController.h"
+#import "PTRXParameterFromContentNavigationToTabs.h"
 
-static NSString * const ClientLinkAddress = @"http://scs3.syslive.cn/mb/customer/customerlist.ds";
+//static NSString * const ClientLinkAddress = @"http://scs3.syslive.cn/mb/customer/customerlist.ds";
 
 @interface PTRXClientsViewController ()
 
+@property (weak, nonatomic) IBOutlet UITabBarItem *barButton;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
@@ -31,8 +34,12 @@ static NSString * const ClientLinkAddress = @"http://scs3.syslive.cn/mb/customer
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    PTRXParameterFromContentNavigationToTabs *parameter = [PTRXParameterFromContentNavigationToTabs sharedParameter];
     
-    NSURL *url = [NSURL URLWithString:ClientLinkAddress];
+    self.barButton.title = parameter.barButtonOneName;
+    NSURL *url = [NSURL URLWithString:parameter.urlStringForWebView];
+    NSLog(@"urlString: %@", parameter.urlStringForWebView);
+    //NSURL *url = [NSURL URLWithString:ClientLinkAddress];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
 }
