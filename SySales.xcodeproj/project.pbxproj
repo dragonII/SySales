@@ -12,6 +12,7 @@
 		2F0C64C81A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C64C71A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m */; };
 		2F0C64CB1A2B598D0024DBCF /* PTRXContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C64CA1A2B598D0024DBCF /* PTRXContactsViewController.m */; };
 		2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */; };
+		2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */; };
 		2F824F921A2448F800C037B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F911A2448F800C037B6 /* Foundation.framework */; };
 		2F824F941A2448F800C037B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F931A2448F800C037B6 /* CoreGraphics.framework */; };
 		2F824F961A2448F800C037B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F951A2448F800C037B6 /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 		2F0C64CA1A2B598D0024DBCF /* PTRXContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXContactsViewController.m; sourceTree = "<group>"; };
 		2F0CE7B21A28162700E5CDDF /* PTRXDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXDataPersistence.h; sourceTree = "<group>"; };
 		2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXDataPersistence.m; sourceTree = "<group>"; };
+		2F645FC11A2E13FF00B6D355 /* PTRXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXConstants.h; sourceTree = "<group>"; };
+		2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXConstants.m; sourceTree = "<group>"; };
 		2F824F8E1A2448F800C037B6 /* SySales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SySales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F824F911A2448F800C037B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2F824F931A2448F800C037B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 			children = (
 				2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */,
 				2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */,
+				2F645FC11A2E13FF00B6D355 /* PTRXConstants.h */,
+				2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */,
 				2F824FC81A2449C500C037B6 /* PTRXWizardViewController.h */,
 				2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */,
 				2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */,
@@ -349,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0C64CB1A2B598D0024DBCF /* PTRXContactsViewController.m in Sources */,
+				2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */,
 				2F0C64C81A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m in Sources */,
 				2F0C64C51A2B4D700024DBCF /* PTRXContentTabsViewController.m in Sources */,
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,

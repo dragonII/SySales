@@ -9,6 +9,7 @@
 #import "PTRXLoginViewController.h"
 #import "PTRXMainViewController.h"
 #import "PTRXContentNavigationViewController.h"
+#import "PTRXConstants.h"
 
 #import <AFNetworking/AFNetworking.h>
 
@@ -29,6 +30,12 @@
 @end
 
 @implementation PTRXLoginViewController
+{
+    BOOL _loginFinished;
+    BOOL _loginSuccess;
+    PTRXConstants *_Constants;
+    NSString *_resultString;
+}
 
 //PTRXMainViewController *_mainViewController;
 
@@ -47,6 +54,8 @@
     [super viewDidLoad];
     
     self.mainController.wizardController = nil;
+    _loginFinished = NO;
+    _Constants = [PTRXConstants sharedConstants];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,56 +70,17 @@
     [self.passwdTextField resignFirstResponder];
     
     [self performLogin];
-    //[self testLogin];
-    //[self postLogin];
+    //[self postLogin
 }
 
-- (void)getXML
-{
-    NSString *URLString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
-    NSDictionary *dict = @{@"USERNAME": @"999", @"PASSWORD": @"123456"};
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    //manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
-    [manager POST:URLString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"POST --> %@", responseObject);
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-}
-
-- (void) postLogin
-{
-    NSString *URLString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
-    //manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
-    NSDictionary *dict = @{@"user": @"666", @"password": @"123"};
-    
-    [manager POST:URLString parameters:dict success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"POST --> %@", responseObject);
-        
-        NSXMLParser *xmlParser = (NSXMLParser *)responseObject;
-        [xmlParser setShouldProcessNamespaces:YES];
-        NSLog(@"POST --> %@", xmlParser);
-        xmlParser.delegate = self;
-        [xmlParser parse];
-        
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
-}
 
 - (void)performLogin
 {
     self.loginButton.enabled = NO;
     self.loginButton.alpha = 0.18f;
     
+    self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    self.spinner.color = [UIColor grayColor];
     [self.spinner startAnimating];
     
     __block BOOL loginSuccess = NO;
@@ -129,7 +99,10 @@
                 [self.spinner stopAnimating];
                 if(loginSuccess == YES)
                 {
-                    [self gotoNextView];
+                    //[self gotoNextView];
+                    NSLog(@"login success");
+                    self.loginButton.alpha = 1.0f;
+                    self.loginButton.enabled = YES;
                 } else {
                     self.loginButton.enabled = YES;
                     self.loginButton.alpha = 1.0f;
@@ -153,9 +126,55 @@
     [self.mainController.view insertSubview:self.mainController.contentNVController.view atIndex:0];
 }
 
+- (void)postLogin
+{
+    NSString *urlString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
+    NSURL *url = [NSURL URLWithString:urlString];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    //NSDictionary *parameter = @{@"user": @"666", @"password": @"123"};
+    NSDictionary *parameter = @{@"user":self.nameTextField.text, @"password":self.passwdTextField.text};
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    [manager POST:@""
+       parameters:parameter
+          success:^(NSURLSessionDataTask *task, id responseObject) {
+              NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+              //NSLog(@"%@", responseString);
+              _resultString = [NSString stringWithString:responseString];
+              _loginFinished = YES;
+          }failure:^(NSURLSessionDataTask *task, NSError *error) {
+              NSLog(@"Error: %@", [error description]);
+              //responseString = nil;
+              _loginFinished = YES;
+          }];
+}
+
 - (BOOL)loginToServer
 {
-    [NSThread sleepForTimeInterval:1];
+    [self postLogin];
+    //NSLog(@"loginToServer -> %@", responseString);
+    while (_loginFinished == NO)
+    {
+        [NSThread sleepForTimeInterval:0.001];
+    }
+    //NSLog(@"ResultString: %@", _resultString);
+    NSLog(@"Constants: %@, %@", _Constants.PTRX_LOGIN_INFO_DICT, _Constants.PTRX_LOGIN_STRINGS);
+    // Compare substring
+    //[_Constants.PTRX_LOGIN_STRINGS ]
+    NSString *subString;
+    NSInteger index;
+    for(index = 0; index < [_Constants.PTRX_LOGIN_STRINGS count]; index++)
+    {
+        subString = [_Constants.PTRX_LOGIN_STRINGS objectAtIndex:index];
+        if([_resultString rangeOfString:subString].location != NSNotFound)
+        {
+            break;
+        }
+    }
+    NSString *indexString = [NSString stringWithFormat:@"%d", index];
+    [_Constants.PTRX_LOGIN_INFO_DICT objectForKey:indexString];
+
     return YES;
 }
 
