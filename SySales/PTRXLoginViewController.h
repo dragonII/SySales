@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic)PTRXMainViewController *mainController;
 
+- (IBAction)textFieldDoneEditing:(id)sender;
+
 @end

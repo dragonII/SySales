@@ -10,6 +10,7 @@
 #import "PTRXMainViewController.h"
 #import "PTRXContentNavigationViewController.h"
 #import "PTRXConstants.h"
+#import "PTRXDataPersistence.h"
 
 #import <AFNetworking/AFNetworking.h>
 
@@ -35,6 +36,7 @@
     BOOL _loginSuccess;
     PTRXConstants *_Constants;
     NSString *_resultString;
+    NSString *_singleKeyString;
 }
 
 //PTRXMainViewController *_mainViewController;
@@ -99,11 +101,23 @@
                 [self.spinner stopAnimating];
                 if(loginSuccess == YES)
                 {
-                    //[self gotoNextView];
-                    NSLog(@"login success");
+                    [PTRXDataPersistence saveUserName:self.nameTextField.text
+                                          andPassword:self.passwdTextField.text];
+                    [self gotoNextView];
+                    //NSLog(@"login success");
                     self.loginButton.alpha = 1.0f;
                     self.loginButton.enabled = YES;
                 } else {
+                    
+                        UIAlertView *alertView = [[UIAlertView alloc]
+                                                  initWithTitle:NSLocalizedString(@"Login Failed", "Login failed")
+                                                  message:[_Constants.PTRX_LOGIN_INFO_DICT objectForKey:_singleKeyString]
+                                                  delegate:nil
+                                                  cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                                                  otherButtonTitles:nil];
+                        
+                        [alertView show];
+                    
                     self.loginButton.enabled = YES;
                     self.loginButton.alpha = 1.0f;
                 }
@@ -128,11 +142,10 @@
 
 - (void)postLogin
 {
-    NSString *urlString = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
-    NSURL *url = [NSURL URLWithString:urlString];
+    NSURL *url = [NSURL URLWithString:_Constants.PTRX_S_LOGIN_URL];
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
-    //NSDictionary *parameter = @{@"user": @"666", @"password": @"123"};
     NSDictionary *parameter = @{@"user":self.nameTextField.text, @"password":self.passwdTextField.text};
+    NSLog(@"Parameter: %@", parameter);
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [manager.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
@@ -153,66 +166,56 @@
 - (BOOL)loginToServer
 {
     [self postLogin];
-    //NSLog(@"loginToServer -> %@", responseString);
+    
     while (_loginFinished == NO)
     {
         [NSThread sleepForTimeInterval:0.001];
     }
-    //NSLog(@"ResultString: %@", _resultString);
-    NSLog(@"Constants: %@, %@", _Constants.PTRX_LOGIN_INFO_DICT, _Constants.PTRX_LOGIN_STRINGS);
+    
     // Compare substring
-    //[_Constants.PTRX_LOGIN_STRINGS ]
     NSString *subString;
     NSInteger index;
+    NSRange range = NSMakeRange(26, 1);
     for(index = 0; index < [_Constants.PTRX_LOGIN_STRINGS count]; index++)
     {
         subString = [_Constants.PTRX_LOGIN_STRINGS objectAtIndex:index];
         if([_resultString rangeOfString:subString].location != NSNotFound)
         {
+            _singleKeyString = [subString substringWithRange:range];
+            NSLog(@"Single: %@", _singleKeyString);
             break;
         }
     }
-    NSString *indexString = [NSString stringWithFormat:@"%d", index];
-    [_Constants.PTRX_LOGIN_INFO_DICT objectForKey:indexString];
-
-    return YES;
+    
+    if([_singleKeyString isEqualToString:@"1"])
+    {
+        return YES;
+    } else {
+        return NO;
+    }
 }
+
+- (IBAction)textFieldDoneEditing:(id)sender
+{
+    UITextField *textField = (UITextField *)sender;
+    if(textField.tag == 3001)
+    {
+        // name text field
+        [sender resignFirstResponder];
+        [self.passwdTextField becomeFirstResponder];
+    } else {
+        // password text field
+        [sender resignFirstResponder];
+        [self performLogin];
+    }
+}
+
+
 
 - (void)dealloc
 {
     NSLog(@"dealloc: %@", self);
 }
 
-- (void)parserDidStartDocument:(NSXMLParser *)parser
-{
-    NSLog(@"Did Start Document");
-    self.xmlContent = [NSMutableDictionary dictionary];
-}
-
-- (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict
-{
-    self.elementName = qName;
-    NSLog(@"Start Element: %@", qName);
-    self.currentDictionary = [NSMutableDictionary dictionary];
-    self.outString = [NSMutableString string];
-}
-
-- (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string
-{
-    NSLog(@"Found Characters: %@", string);
-    if(!self.elementName)
-        return;
-    [self.outString appendFormat:@"%@", string];
-}
-
-- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName
-{
-    NSLog(@"End Element: %@", qName);
-}
-
-- (void)parserDidEndDocument:(NSXMLParser *)parser
-{
-    NSLog(@"End Document");
-}
 
 @end

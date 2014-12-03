@@ -10,14 +10,9 @@
 
 @interface PTRXConstants ()
 
-@property (strong, nonatomic) NSString *PTRX_S_LOGIN_SUCCESS;
-@property (strong, nonatomic) NSString *PTRX_S_LOGIN_WRONG_PASS;
-@property (strong, nonatomic) NSString *PTRX_S_LOGIN_ACCOUNT_LOCK;
-@property (strong, nonatomic) NSString *PTRX_S_LOGIN_LOGIN_WARNING;
-@property (strong, nonatomic) NSString *PTRX_S_LOGIN_NO_ACCOUNT;
-
 @property (strong, nonatomic) NSArray *PTRX_LOGIN_STRINGS;
 @property (strong, nonatomic) NSDictionary *PTRX_LOGIN_INFO_DICT;
+@property (strong, nonatomic) NSString *PTRX_S_LOGIN_URL;
 
 @end
 
@@ -34,12 +29,13 @@
       ];
     
     self.PTRX_LOGIN_INFO_DICT = @{
-                                  @"1": @"Login Success",
-                                  @"2": @"Wrong Password",
-                                  @"3": @"Account Locked",
-                                  @"5": @"Warning Login",
-                                  @"0": @"No Account"
+                                  @"1": NSLocalizedString(@"Login Success", @"Login Success"),
+                                  @"2": NSLocalizedString(@"Wrong Password", @"Wrong password"),
+                                  @"3": NSLocalizedString(@"Account Locked", @"Account Locked"),
+                                  @"5": NSLocalizedString(@"Warning Login", @"Warning login"),
+                                  @"0": NSLocalizedString(@"No Such Account", @"No Such Account")
                                     };
+    self.PTRX_S_LOGIN_URL = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
 }
 
 +(instancetype)sharedConstants

@@ -76,23 +76,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="syslivelogo" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-lg-kzX">
-                                <rect key="frame" x="50" y="57" width="220" height="97"/>
+                                <rect key="frame" x="50" y="50" width="220" height="97"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-j7-YhS">
-                                <rect key="frame" x="60" y="162" width="201" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M0t-j7-YhS">
+                                <rect key="frame" x="60" y="155" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="olY-nH-m0y" eventType="editingDidEndOnExit" id="QDF-Ue-Bhy"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-mY-tHb">
-                                <rect key="frame" x="60" y="200" width="201" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" tag="3002" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-mY-tHb">
+                                <rect key="frame" x="60" y="193" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="olY-nH-m0y" eventType="editingDidEndOnExit" id="4i8-rb-eRd"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89a-YN-aPG">
-                                <rect key="frame" x="60" y="238" width="201" height="30"/>
+                                <rect key="frame" x="60" y="231" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="登录" backgroundImage="LoginButton">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

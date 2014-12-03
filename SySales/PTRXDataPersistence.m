@@ -28,24 +28,35 @@
 
 + (void)saveUserName:(NSString *)userName andPassword:(NSString *)password
 {
-    //NSString *filePath = [self preferenceFilePath];
+    NSString *filePath = [self preferenceFilePath];
+    
+    if([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithContentsOfFile:filePath];
+        [dict setObject:userName forKey:@"user"];
+        [dict setObject:password forKey:@"password"];
+        [dict writeToFile:filePath atomically:YES];
+    } else {
+        NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+        [dict setObject:userName forKey:@"user"];
+        [dict setObject:password forKey:@"password"];
+        [dict writeToFile:filePath atomically:YES];
+    }
     
 }
 
 + (NSString *)getFirstLaunchValue
 {
     NSString *filePath = [self preferenceFilePath];
-    NSLog(@"filePath: %@", filePath);
     if([[NSFileManager defaultManager] fileExistsAtPath:filePath])
     {
         NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:filePath];
-        NSLog(@"Found: %@", dict[@"firstLaunch"]);
+        NSLog(@"Preference: %@", dict);
         return dict[@"firstLaunch"];
     } else {
         NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
         dict[@"firstLaunch"] = @"NO";
         [dict writeToFile:filePath atomically:YES];
-        NSLog(@"Not Found, return YES, and saving");
         return @"YES";
     }
 }
