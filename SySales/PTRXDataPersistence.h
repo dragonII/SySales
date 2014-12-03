@@ -11,6 +11,8 @@
 @interface PTRXDataPersistence : NSObject
 
 + (NSString *)getFirstLaunchValue;
+
 + (void)saveUserName:(NSString *)userName andPassword:(NSString *)password;
++ (NSDictionary *)getUserPassword;
 
 @end

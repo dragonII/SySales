@@ -10,10 +10,13 @@
 
 @interface PTRXConstants : NSObject
 
-@property (readonly, nonatomic) NSString *PTRX_S_LOGIN_URL;
+@property (strong, nonatomic) NSString *PTRX_S_LOGIN_URL;
 
-@property (readonly, nonatomic) NSArray *PTRX_LOGIN_STRINGS;
-@property (readonly, nonatomic) NSDictionary *PTRX_LOGIN_INFO_DICT;
+@property (strong, nonatomic) NSArray *PTRX_LOGIN_STRINGS;
+@property (strong, nonatomic) NSDictionary *PTRX_LOGIN_INFO_DICT;
+
+@property (strong, nonatomic) NSString *userKey;
+@property (strong, nonatomic) NSString *passKey;
 
 +(instancetype)sharedConstants;
 

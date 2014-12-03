@@ -37,6 +37,7 @@
     PTRXConstants *_Constants;
     NSString *_resultString;
     NSString *_singleKeyString;
+    NSDictionary *_userPassDict;
 }
 
 //PTRXMainViewController *_mainViewController;
@@ -58,6 +59,22 @@
     self.mainController.wizardController = nil;
     _loginFinished = NO;
     _Constants = [PTRXConstants sharedConstants];
+    
+    _userPassDict = [PTRXDataPersistence getUserPassword];
+    if(_userPassDict != nil)
+    {
+        NSString *user = [_userPassDict objectForKey:_Constants.userKey];
+        NSString *pass = [_userPassDict objectForKey:_Constants.passKey];
+        
+        [self loginWithUser:user password:pass];
+    }
+}
+
+- (void)loginWithUser:(NSString *)user password:(NSString *)password
+{
+    self.nameTextField.text = user;
+    self.passwdTextField.text = password;
+    [self performLoginWithUser:user andPassword:password];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,15 +88,20 @@
     [self.nameTextField resignFirstResponder];
     [self.passwdTextField resignFirstResponder];
     
-    [self performLogin];
+    [self performLoginWithUser:self.nameTextField.text
+                   andPassword:self.passwdTextField.text];
     //[self postLogin
 }
 
 
-- (void)performLogin
+- (void)performLoginWithUser:(NSString *)user andPassword:(NSString *)password
 {
     self.loginButton.enabled = NO;
     self.loginButton.alpha = 0.18f;
+    self.nameTextField.enabled = NO;
+    self.passwdTextField.enabled = NO;
+    self.nameTextField.alpha = 0.18f;
+    self.passwdTextField.alpha = 0.18f;
     
     self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
     self.spinner.color = [UIColor grayColor];
@@ -101,8 +123,8 @@
                 [self.spinner stopAnimating];
                 if(loginSuccess == YES)
                 {
-                    [PTRXDataPersistence saveUserName:self.nameTextField.text
-                                          andPassword:self.passwdTextField.text];
+                    [PTRXDataPersistence saveUserName:user
+                                          andPassword:password];
                     [self gotoNextView];
                     //NSLog(@"login success");
                     self.loginButton.alpha = 1.0f;
@@ -165,6 +187,7 @@
 
 - (BOOL)loginToServer
 {
+    [NSThread sleepForTimeInterval:2];
     [self postLogin];
     
     while (_loginFinished == NO)
@@ -206,7 +229,8 @@
     } else {
         // password text field
         [sender resignFirstResponder];
-        [self performLogin];
+        [self performLoginWithUser:self.nameTextField.text
+                       andPassword:self.passwdTextField.text];
     }
 }
 

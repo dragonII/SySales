@@ -45,6 +45,24 @@
     
 }
 
++ (NSDictionary *)getUserPassword
+{
+    NSString *userKey = @"user";
+    NSString *passKey = @"password";
+    NSMutableDictionary *dict;
+    NSString *filePath = [self preferenceFilePath];
+    if([[NSFileManager defaultManager] fileExistsAtPath:filePath])
+    {
+        NSDictionary *dictFromFile = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+        dict = [[NSMutableDictionary alloc] init];
+        [dict setObject:[dictFromFile objectForKey:userKey] forKey:userKey];
+        [dict setObject:[dictFromFile objectForKey:passKey] forKey:passKey];
+        return dict;
+    } else {
+        return nil;
+    }
+}
+
 + (NSString *)getFirstLaunchValue
 {
     NSString *filePath = [self preferenceFilePath];

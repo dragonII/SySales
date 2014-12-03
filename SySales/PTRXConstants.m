@@ -10,9 +10,6 @@
 
 @interface PTRXConstants ()
 
-@property (strong, nonatomic) NSArray *PTRX_LOGIN_STRINGS;
-@property (strong, nonatomic) NSDictionary *PTRX_LOGIN_INFO_DICT;
-@property (strong, nonatomic) NSString *PTRX_S_LOGIN_URL;
 
 @end
 
@@ -36,6 +33,9 @@
                                   @"0": NSLocalizedString(@"No Such Account", @"No Such Account")
                                     };
     self.PTRX_S_LOGIN_URL = @"http://scs3.syslive.cn/interface_mb/login_mb/login.ds";
+    
+    self.userKey = @"user";
+    self.passKey = @"password";
 }
 
 +(instancetype)sharedConstants
