@@ -63,6 +63,7 @@
     _userPassDict = [PTRXDataPersistence getUserPassword];
     if(_userPassDict != nil)
     {
+        NSLog(@"_userPassDict != nil");
         NSString *user = [_userPassDict objectForKey:_Constants.userKey];
         NSString *pass = [_userPassDict objectForKey:_Constants.passKey];
         

@@ -55,12 +55,14 @@
     {
         NSDictionary *dictFromFile = [[NSDictionary alloc] initWithContentsOfFile:filePath];
         dict = [[NSMutableDictionary alloc] init];
-        [dict setObject:[dictFromFile objectForKey:userKey] forKey:userKey];
-        [dict setObject:[dictFromFile objectForKey:passKey] forKey:passKey];
-        return dict;
-    } else {
-        return nil;
+        if([dictFromFile objectForKey:userKey] != nil && [dictFromFile objectForKey:passKey] != nil)
+        {
+            [dict setObject:[dictFromFile objectForKey:userKey] forKey:userKey];
+            [dict setObject:[dictFromFile objectForKey:passKey] forKey:passKey];
+            return dict;
+        }
     }
+    return nil;
 }
 
 + (NSString *)getFirstLaunchValue
