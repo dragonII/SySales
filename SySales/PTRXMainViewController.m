@@ -49,7 +49,7 @@
         [self.view insertSubview:appDelegate.loginController.view atIndex:0];
     }
     
-    NSLog(@"Self in Main: %@", self);
+    self.navigationController.navigationBarHidden = YES;
 }
 
 

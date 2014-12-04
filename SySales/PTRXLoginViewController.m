@@ -91,9 +91,14 @@
     [self.nameTextField resignFirstResponder];
     [self.passwdTextField resignFirstResponder];
     
-    [self performLoginWithUser:self.nameTextField.text
-                   andPassword:self.passwdTextField.text];
-    //[self postLogin
+    [self performLoginWithUser:self.nameTextField.text andPassword:self.passwdTextField.text];
+    //[self gotoMainTabs];
+    
+}
+
+- (void)gotoMainTabs
+{
+    [self performSegueWithIdentifier:@"ToMainTabs" sender:self];
 }
 
 
@@ -129,7 +134,7 @@
                     [PTRXDataPersistence saveUserName:user
                                           andPassword:password];
                     NSLog(@"login success");
-                    [self gotoNextView];
+                    [self gotoMainTabs];
                     self.loginButton.alpha = 1.0f;
                     self.loginButton.enabled = YES;
                 } else {
