@@ -8,9 +8,10 @@
 
 #import "PTRXDetailForHomePageViewController.h"
 
-@interface PTRXDetailForHomePageViewController ()
+@interface PTRXDetailForHomePageViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -29,6 +30,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.webView.delegate = self;
+    //self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    //self.spinner.color = [UIColor grayColor];
+    [self initSpinner];
+}
+
+- (void)initSpinner
+{
+    CGFloat x = CGRectGetMidX(self.webView.frame);
+    CGFloat y = CGRectGetMinY(self.webView.frame);
+    
+    self.spinner.center = CGPointMake(x, y);
+    NSLog(@"x = %f, y = %f", x, y);
+    self.spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+    self.spinner.color = [UIColor grayColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -48,6 +65,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    [self.spinner startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self.spinner stopAnimating];
 }
 
 @end

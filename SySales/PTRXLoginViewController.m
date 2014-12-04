@@ -156,24 +156,6 @@
     });
 }
 
-- (void)gotoNextView
-{
-    NSLog(@"In gotoNextView");
-    
-    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
-    PTRXAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    //NSLog(@"mainController: %@", mainController);
-    
-    if(appDelegate.contentNVController == nil)
-    {
-        appDelegate.contentNVController = [appDelegate.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentNavigation"];
-        //NSLog(@"Creating ContentNavigation: %@", mainController.contentNVController);
-        //self.mainController.contentNVController.mainController = self.mainController;
-    }
-    
-    [self.view removeFromSuperview];
-    [appDelegate.mainController.view insertSubview:appDelegate.contentNVController.view atIndex:0];
-}
 
 - (void)postLogin
 {

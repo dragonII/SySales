@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D71A77A0BE848ED8E48429E /* libPods-SySales.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AC9A3EA3FFD5C9372F735D /* libPods-SySales.a */; };
-		2F0C64C51A2B4D700024DBCF /* PTRXContentTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C64C41A2B4D700024DBCF /* PTRXContentTabsViewController.m */; };
-		2F0C64C81A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C64C71A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m */; };
-		2F0C64CB1A2B598D0024DBCF /* PTRXContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0C64CA1A2B598D0024DBCF /* PTRXContactsViewController.m */; };
 		2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */; };
 		2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */; };
 		2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0EFEDA1A30A8CD0024EE9B /* PTRXHomeTabViewController.m */; };
@@ -31,10 +28,8 @@
 		2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */; };
 		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
 		2F824FD21A2449C500C037B6 /* PTRXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */; };
-		2F824FD31A2449C500C037B6 /* PTRXContentNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */; };
 		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
 		2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */; };
-		2FE9D4371A28BF8D00EE1B29 /* PTRXClientsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9D4361A28BF8D00EE1B29 /* PTRXClientsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,12 +44,6 @@
 
 /* Begin PBXFileReference section */
 		0E0289E95E317597283617BC /* Pods-SySales.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SySales.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SySales/Pods-SySales.debug.xcconfig"; sourceTree = "<group>"; };
-		2F0C64C31A2B4D700024DBCF /* PTRXContentTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXContentTabsViewController.h; sourceTree = "<group>"; };
-		2F0C64C41A2B4D700024DBCF /* PTRXContentTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXContentTabsViewController.m; sourceTree = "<group>"; };
-		2F0C64C61A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXParameterFromContentNavigationToTabs.h; sourceTree = "<group>"; };
-		2F0C64C71A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXParameterFromContentNavigationToTabs.m; sourceTree = "<group>"; };
-		2F0C64C91A2B598D0024DBCF /* PTRXContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXContactsViewController.h; sourceTree = "<group>"; };
-		2F0C64CA1A2B598D0024DBCF /* PTRXContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXContactsViewController.m; sourceTree = "<group>"; };
 		2F0CE7B21A28162700E5CDDF /* PTRXDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXDataPersistence.h; sourceTree = "<group>"; };
 		2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXDataPersistence.m; sourceTree = "<group>"; };
 		2F0EFED61A30A86F0024EE9B /* PTRXDetailForHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXDetailForHomePageViewController.h; sourceTree = "<group>"; };
@@ -86,15 +75,11 @@
 		2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXLoginViewController.m; sourceTree = "<group>"; };
 		2F824FCC1A2449C500C037B6 /* PTRXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainViewController.h; sourceTree = "<group>"; };
 		2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainViewController.m; sourceTree = "<group>"; };
-		2F824FCE1A2449C500C037B6 /* PTRXContentNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXContentNavigationViewController.h; sourceTree = "<group>"; };
-		2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXContentNavigationViewController.m; sourceTree = "<group>"; };
 		2FB07B8A1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8B1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 		2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainTabsViewController.h; sourceTree = "<group>"; };
 		2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainTabsViewController.m; sourceTree = "<group>"; };
-		2FE9D4351A28BF8D00EE1B29 /* PTRXClientsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXClientsViewController.h; sourceTree = "<group>"; };
-		2FE9D4361A28BF8D00EE1B29 /* PTRXClientsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXClientsViewController.m; sourceTree = "<group>"; };
 		930EDF6CE772C34A8E9B33C9 /* Pods-SySales.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SySales.release.xcconfig"; path = "Pods/Target Support Files/Pods-SySales/Pods-SySales.release.xcconfig"; sourceTree = "<group>"; };
 		A4AC9A3EA3FFD5C9372F735D /* libPods-SySales.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SySales.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,18 +154,8 @@
 				2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */,
 				2F824FCC1A2449C500C037B6 /* PTRXMainViewController.h */,
 				2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */,
-				2F824FCE1A2449C500C037B6 /* PTRXContentNavigationViewController.h */,
-				2F824FCF1A2449C500C037B6 /* PTRXContentNavigationViewController.m */,
-				2FE9D4351A28BF8D00EE1B29 /* PTRXClientsViewController.h */,
-				2FE9D4361A28BF8D00EE1B29 /* PTRXClientsViewController.m */,
-				2F0C64C91A2B598D0024DBCF /* PTRXContactsViewController.h */,
-				2F0C64CA1A2B598D0024DBCF /* PTRXContactsViewController.m */,
-				2F0C64C31A2B4D700024DBCF /* PTRXContentTabsViewController.h */,
-				2F0C64C41A2B4D700024DBCF /* PTRXContentTabsViewController.m */,
 				2F0CE7B21A28162700E5CDDF /* PTRXDataPersistence.h */,
 				2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */,
-				2F0C64C61A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.h */,
-				2F0C64C71A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m */,
 				2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */,
 				2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */,
 				2F0EFED91A30A8CD0024EE9B /* PTRXHomeTabViewController.h */,
@@ -368,17 +343,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F0C64CB1A2B598D0024DBCF /* PTRXContactsViewController.m in Sources */,
 				2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */,
-				2F0C64C81A2B4EB10024DBCF /* PTRXParameterFromContentNavigationToTabs.m in Sources */,
-				2F0C64C51A2B4D700024DBCF /* PTRXContentTabsViewController.m in Sources */,
 				2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */,
 				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
 				2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */,
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,
 				2F824F9E1A2448F900C037B6 /* main.m in Sources */,
-				2FE9D4371A28BF8D00EE1B29 /* PTRXClientsViewController.m in Sources */,
-				2F824FD31A2449C500C037B6 /* PTRXContentNavigationViewController.m in Sources */,
 				2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */,
 				2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */,
 				2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */,
