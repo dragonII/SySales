@@ -7,8 +7,7 @@
 //
 
 #import "PTRXLoginViewController.h"
-#import "PTRXMainViewController.h"
-#import "PTRXContentNavigationViewController.h"
+#import "PTRXAppDelegate.h"
 #import "PTRXConstants.h"
 #import "PTRXDataPersistence.h"
 
@@ -56,7 +55,10 @@
 {
     [super viewDidLoad];
     
-    self.mainController.wizardController = nil;
+    PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
+    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    
+    appDelegate.wizardController = nil;
     _loginFinished = NO;
     _Constants = [PTRXConstants sharedConstants];
     
@@ -126,8 +128,8 @@
                 {
                     [PTRXDataPersistence saveUserName:user
                                           andPassword:password];
+                    NSLog(@"login success");
                     [self gotoNextView];
-                    //NSLog(@"login success");
                     self.loginButton.alpha = 1.0f;
                     self.loginButton.enabled = YES;
                 } else {
@@ -153,14 +155,19 @@
 {
     NSLog(@"In gotoNextView");
     
-    if(self.mainController.contentNVController == nil)
+    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    PTRXAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    //NSLog(@"mainController: %@", mainController);
+    
+    if(appDelegate.contentNVController == nil)
     {
-        self.mainController.contentNVController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentNavigation"];
-        self.mainController.contentNVController.mainController = self.mainController;
+        appDelegate.contentNVController = [appDelegate.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentNavigation"];
+        //NSLog(@"Creating ContentNavigation: %@", mainController.contentNVController);
+        //self.mainController.contentNVController.mainController = self.mainController;
     }
     
     [self.view removeFromSuperview];
-    [self.mainController.view insertSubview:self.mainController.contentNVController.view atIndex:0];
+    [appDelegate.mainController.view insertSubview:appDelegate.contentNVController.view atIndex:0];
 }
 
 - (void)postLogin

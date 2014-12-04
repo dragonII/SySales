@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class PTRXMainViewController;
+//@class PTRXMainViewController;
 
 @interface PTRXContentTabsViewController : UITabBarController
 
-@property (strong, nonatomic) PTRXMainViewController *mainController;
+//@property (strong, nonatomic) PTRXMainViewController *mainController;
 
 @end

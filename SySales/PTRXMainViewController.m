@@ -7,10 +7,11 @@
 //
 
 #import "PTRXMainViewController.h"
-#import "PTRXWizardViewController.h"
-#import "PTRXLoginViewController.h"
-#import "PTRXContentNavigationViewController.h"
-#import "PTRXContentTabsViewController.h"
+#import "PTRXAppDelegate.h"
+//#import "PTRXWizardViewController.h"
+//#import "PTRXLoginViewController.h"
+//#import "PTRXContentNavigationViewController.h"
+//#import "PTRXContentTabsViewController.h"
 #import "PTRXDataPersistence.h"
 
 @interface PTRXMainViewController ()
@@ -34,16 +35,21 @@
     
     NSString *firstLaunch = [PTRXDataPersistence getFirstLaunchValue];
     
+    PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
+    appDelegate.mainController = self;
+    
     if([firstLaunch isEqualToString:@"YES"])
     {
-        self.wizardController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wizard"];
-        self.wizardController.mainController = self;
-        [self.view insertSubview:self.wizardController.view atIndex:0];
+        appDelegate.wizardController = [self.storyboard instantiateViewControllerWithIdentifier:@"Wizard"];
+        //self.wizardController.mainController = self;
+        [self.view insertSubview:appDelegate.wizardController.view atIndex:0];
     } else {
-        self.loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
-        self.loginController.mainController = self;
-        [self.view insertSubview:self.loginController.view atIndex:0];
+        appDelegate.loginController = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        //self.loginController.mainController = self;
+        [self.view insertSubview:appDelegate.loginController.view atIndex:0];
     }
+    
+    NSLog(@"Self in Main: %@", self);
 }
 
 

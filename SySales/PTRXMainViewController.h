@@ -15,9 +15,11 @@
 
 @interface PTRXMainViewController : UIViewController
 
+/*
 @property (strong, nonatomic) PTRXLoginViewController *loginController;
 @property (strong, nonatomic) PTRXWizardViewController *wizardController;
 @property (strong, nonatomic) PTRXContentNavigationViewController *contentNVController;
 @property (strong, nonatomic) PTRXContentTabsViewController *contentTabsController;
+ */
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "PTRXContentNavigationViewController.h"
-#import "PTRXMainViewController.h"
-#import "PTRXContentTabsViewController.h"
+//#import "PTRXMainViewController.h"
+//#import "PTRXContentTabsViewController.h"
+#import "PTRXAppDelegate.h"
 #import "PTRXParameterFromContentNavigationToTabs.h"
 
 @interface PTRXContentNavigationViewController ()
@@ -39,8 +40,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    PTRXAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 
-    self.mainController.loginController = nil;
+    appDelegate.loginController = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -83,10 +87,13 @@
     UIButton *button = (UIButton *)sender;
     NSLog(@"Button %@ clicked", button.titleLabel.text);
     
-    if(self.mainController.contentTabsController == nil)
+    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if(appDelegate.contentTabsController == nil)
     {
-        self.mainController.contentTabsController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentTabs"];
-        self.mainController.contentTabsController.mainController = self.mainController;
+        appDelegate.contentTabsController = [appDelegate.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentTabs"];
+        //self.mainController.contentTabsController.mainController = self.mainController;
     }
     
     NSInteger tag = button.tag;
@@ -105,7 +112,7 @@
     }
     
     [self.view removeFromSuperview];
-    [self.mainController.view insertSubview:self.mainController.contentTabsController.view atIndex:0];
+    [appDelegate.mainController.view insertSubview:appDelegate.contentTabsController.view atIndex:0];
 }
 
 
@@ -228,13 +235,16 @@
     
     NSLog(@"Clients button pressed");
     
-    if(self.mainController.contentTabsController == nil)
+    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if(appDelegate.contentTabsController == nil)
     {
-        self.mainController.contentTabsController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentTabs"];
-        self.mainController.contentTabsController.mainController = self.mainController;
+        appDelegate.contentTabsController = [appDelegate.mainController.storyboard instantiateViewControllerWithIdentifier:@"ContentTabs"];
+        //self.mainController.contentTabsController.mainController = self.mainController;
     }
     [self.view removeFromSuperview];
-    [self.mainController.view insertSubview:self.mainController.contentTabsController.view atIndex:0];
+    [appDelegate.mainController.view insertSubview:appDelegate.contentTabsController.view atIndex:0];
     
     /*
     if(self.mainController.clientTabsController == nil)

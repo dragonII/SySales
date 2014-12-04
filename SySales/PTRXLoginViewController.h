@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class PTRXMainViewController;
+//@class PTRXMainViewController;
 
 @interface PTRXLoginViewController : UIViewController
 
-@property (strong, nonatomic)PTRXMainViewController *mainController;
+//@property (strong, nonatomic)PTRXMainViewController *mainController;
 
 - (IBAction)textFieldDoneEditing:(id)sender;
 

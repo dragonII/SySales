@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class PTRXMainViewController;
+//@class PTRXMainViewController;
 @class PTRXClientsTabsController;
 
 @interface PTRXContentNavigationViewController : UIViewController
 
-@property (strong, nonatomic)PTRXMainViewController *mainController;
+//@property (strong, nonatomic)PTRXMainViewController *mainController;
 @property (strong, nonatomic)PTRXClientsTabsController *clientsTabsController;
 
 @end

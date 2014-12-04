@@ -7,8 +7,7 @@
 //
 
 #import "PTRXWizardViewController.h"
-#import "PTRXLoginViewController.h"
-#import "PTRXMainViewController.h"
+#import "PTRXAppDelegate.h"
 
 const int TotalNumPages = 3;
 
@@ -182,17 +181,19 @@ const int TotalNumPages = 3;
 
 - (void)showLoginController
 {
-    if(self.mainController.loginController == nil)
+    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if(appDelegate.loginController == nil)
     {
         [self.view removeFromSuperview];
-        self.mainController.loginController = [self.mainController.storyboard instantiateViewControllerWithIdentifier:@"Login"];
-        self.mainController.loginController.mainController = self.mainController;
-        [self.mainController.view insertSubview:self.mainController.loginController.view atIndex:0];
-        self.mainController.loginController.view.alpha = 0.0f;
+        appDelegate.loginController = [appDelegate.mainController.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+        //mainController.loginController.mainController = self.mainController;
+        [appDelegate.mainController.view insertSubview:appDelegate.loginController.view atIndex:0];
+        appDelegate.loginController.view.alpha = 0.0f;
         
         [UIView animateWithDuration:0.8f
                          animations:^{
-                             self.mainController.loginController.view.alpha = 1.0f;
+                             appDelegate.loginController.view.alpha = 1.0f;
                          }];
     }
 }
