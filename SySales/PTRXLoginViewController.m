@@ -37,6 +37,7 @@
     NSString *_resultString;
     NSString *_singleKeyString;
     NSDictionary *_userPassDict;
+    NSURL *_loginURL;
 }
 
 //PTRXMainViewController *_mainViewController;
@@ -55,22 +56,32 @@
 {
     [super viewDidLoad];
     
-    PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
-    //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
+    NSString *firstLaunch = [PTRXDataPersistence getFirstLaunchValue];
     
-    appDelegate.wizardController = nil;
-    _loginFinished = NO;
-    _Constants = [PTRXConstants sharedConstants];
-    
-    _userPassDict = [PTRXDataPersistence getUserPassword];
-    if(_userPassDict != nil)
+    if([firstLaunch isEqualToString:@"YES"])
     {
-        NSLog(@"_userPassDict != nil");
-        NSString *user = [_userPassDict objectForKey:_Constants.userKey];
-        NSString *pass = [_userPassDict objectForKey:_Constants.passKey];
+        [self performSegueWithIdentifier:@"ToWizard" sender:self];
+    } else {
+        _loginFinished = NO;
+        _Constants = [PTRXConstants sharedConstants];
+    
+        _userPassDict = [PTRXDataPersistence getUserPassword];
+        if(_userPassDict != nil)
+        {
+            NSLog(@"_userPassDict != nil");
+            NSString *user = [_userPassDict objectForKey:_Constants.userKey];
+            NSString *pass = [_userPassDict objectForKey:_Constants.passKey];
         
-        [self loginWithUser:user password:pass];
+            [self loginWithUser:user password:pass];
+        }
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)loginWithUser:(NSString *)user password:(NSString *)password
@@ -160,7 +171,8 @@
 - (void)postLogin
 {
     NSURL *url = [NSURL URLWithString:_Constants.PTRX_S_LOGIN_URL];
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+    _loginURL = url;
+    __block AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
     NSDictionary *parameter = @{@"user":self.nameTextField.text, @"password":self.passwdTextField.text};
     NSLog(@"Parameter: %@", parameter);
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -169,8 +181,19 @@
     [manager POST:@""
        parameters:parameter
           success:^(NSURLSessionDataTask *task, id responseObject) {
+              
               NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-              //NSLog(@"%@", responseString);
+              
+              //NSLog(@"SessionTask: %@", (NSDictionary *)task);
+              NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:_loginURL];
+              for(NSHTTPCookie *cookie in cookies)
+              {
+                  NSLog(@"name: %@, value: %@", cookie.name, cookie.value);
+              }
+              
+              NSLog(@"-------------------");
+              NSLog(@"Cookies: %@", cookies);
+              
               _resultString = [NSString stringWithString:responseString];
               _loginFinished = YES;
           }failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -229,7 +252,10 @@
     }
 }
 
-
+- (IBAction)backToLogin:(UIStoryboardSegue *)segue
+{
+    
+}
 
 - (void)dealloc
 {

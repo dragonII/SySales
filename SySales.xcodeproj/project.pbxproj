@@ -27,7 +27,6 @@
 		2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FC61A24498600C037B6 /* MainView.storyboard */; };
 		2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */; };
 		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
-		2F824FD21A2449C500C037B6 /* PTRXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */; };
 		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
 		2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */; };
 /* End PBXBuildFile section */
@@ -73,8 +72,6 @@
 		2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXWizardViewController.m; sourceTree = "<group>"; };
 		2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXLoginViewController.h; sourceTree = "<group>"; };
 		2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXLoginViewController.m; sourceTree = "<group>"; };
-		2F824FCC1A2449C500C037B6 /* PTRXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainViewController.h; sourceTree = "<group>"; };
-		2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainViewController.m; sourceTree = "<group>"; };
 		2FB07B8A1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8B1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
@@ -152,8 +149,6 @@
 				2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */,
 				2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */,
 				2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */,
-				2F824FCC1A2449C500C037B6 /* PTRXMainViewController.h */,
-				2F824FCD1A2449C500C037B6 /* PTRXMainViewController.m */,
 				2F0CE7B21A28162700E5CDDF /* PTRXDataPersistence.h */,
 				2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */,
 				2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */,
@@ -352,7 +347,6 @@
 				2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */,
 				2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */,
 				2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */,
-				2F824FD21A2449C500C037B6 /* PTRXMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

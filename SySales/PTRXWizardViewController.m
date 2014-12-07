@@ -181,6 +181,7 @@ const int TotalNumPages = 3;
 
 - (void)showLoginController
 {
+    /*
     //PTRXMainViewController *mainController = [PTRXMainViewController sharedMainController];
     PTRXAppDelegate *appDelegate = (PTRXAppDelegate *)[[UIApplication sharedApplication] delegate];
     if(appDelegate.loginController == nil)
@@ -196,6 +197,8 @@ const int TotalNumPages = 3;
                              appDelegate.loginController.view.alpha = 1.0f;
                          }];
     }
+     */
+    [self performSegueWithIdentifier:@"WizardToLogin" sender:self];
 }
 
 - (void)dismissFromParentViewController

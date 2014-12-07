@@ -15,5 +15,6 @@
 //@property (strong, nonatomic)PTRXMainViewController *mainController;
 
 - (IBAction)textFieldDoneEditing:(id)sender;
+- (IBAction)backToLogin:(UIStoryboardSegue *)segue;
 
 @end

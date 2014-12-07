@@ -54,6 +54,18 @@
     
     if(self.urlStringForWebView != nil && [self.urlStringForWebView length] != 0)
     {
+        /*
+         NSURL *myURL = ....
+         NSMutableRequest *mutableRequest = ....
+         NSArray *cookiesToSet = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookiesForURL:myURL];
+         for (NSHTTPCookie *cookie in cookiesToSet) {
+         [cookieStringToSet appendFormat:@"%@=%@;", cookie.name, cookie.value];
+         }
+         
+         if (cookieStringToSet.length) {
+         [mutableRequest setValue:cookieStringToSet forHTTPHeaderField:@"Cookie"];
+         }
+         */
         NSURL *url = [NSURL URLWithString:self.urlStringForWebView];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         [self.webView loadRequest:request];
