@@ -11,16 +11,20 @@
 #import "PTRXConstants.h"
 
 #import <AFNetworking/AFNetworking.h>
+                         
 
-@interface PTRXHomeTabViewController ()
+@interface PTRXHomeTabViewController () <UIScrollViewDelegate>
 {
     PTRXConstants *_Constants;
     BOOL _logoutFinished;
 }
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @end
 
 @implementation PTRXHomeTabViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,15 +43,85 @@
     _Constants = [PTRXConstants sharedConstants];
     _logoutFinished = NO;
     
+    //[self addActionsToButtons];
+    self.scrollView.delegate = self;
+    [self addButtons];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self initScrollViewContentSize];
     
-    
-    [self addActionsToButtons];
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)initScrollViewContentSize
+{
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.bounds.size.width, self.scrollView.bounds.size.height * 1.05f);
+    self.scrollView.showsVerticalScrollIndicator = NO;
+}
+
+- (void)addButtons
+{
+    UIColor *colorForColumn1 = [UIColor colorWithRed:252/255.0f green:98/255.0f blue:117/255.0f alpha:1.0f];
+    UIColor *colorForColumn2 = [UIColor colorWithRed:67/255.0f green:154/255.0f blue:252/255.0f alpha:1.0f];
+    UIColor *colorForColumn3 = [UIColor colorWithRed:139/255.0f green:152/255.0f blue:252/255.0f alpha:1.0f];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"300x60"]];
+    imageView.frame = CGRectMake(9, 20, 300, 60);
+    
+    UIButton *button1 = [[UIButton alloc] initWithFrame:CGRectMake(10.0f, 90.0f, 93.0f, 144.0f)];
+    [button1 setBackgroundColor:colorForColumn1];
+    button1.tag = 2001;
+    
+    UIButton *button2 = [[UIButton alloc] initWithFrame:CGRectMake(10.0f, 244.0f, 93.0f, 144.0f)];
+    [button2 setBackgroundColor:colorForColumn1];
+    button1.tag = 2002;
+    
+    UIButton *button3 = [[UIButton alloc] initWithFrame:CGRectMake(10.0f, 398.0f, 93.0f, 72.0f)];
+    [button3 setBackgroundColor:colorForColumn1];
+    button1.tag = 2003;
+    
+    UIButton *button4 = [[UIButton alloc] initWithFrame:CGRectMake(113.0f, 90.0f, 93.0f, 72.0f)];
+    [button4 setBackgroundColor:colorForColumn2];
+    button1.tag = 2004;
+    
+    UIButton *button5 = [[UIButton alloc] initWithFrame:CGRectMake(113.0f, 172.0f, 93.0f, 144.0f)];
+    [button5 setBackgroundColor:colorForColumn2];
+    button1.tag = 2005;
+    
+    UIButton *button6 = [[UIButton alloc] initWithFrame:CGRectMake(113.0f, 326.0f, 93.0f, 144.0f)];
+    [button6 setBackgroundColor:colorForColumn2];
+    button1.tag = 2006;
+    
+    UIButton *button7 = [[UIButton alloc] initWithFrame:CGRectMake(216.0f, 90.0f, 93.0f, 144.0f)];
+    [button7 setBackgroundColor:colorForColumn3];
+    button1.tag = 2007;
+    
+    UIButton *button8 = [[UIButton alloc] initWithFrame:CGRectMake(216.0f, 244.0f, 93.0f, 72.0f)];
+    [button8 setBackgroundColor:colorForColumn3];
+    button1.tag = 2008;
+    
+    UIButton *button9 = [[UIButton alloc] initWithFrame:CGRectMake(216.0f, 326.0f, 93.0f, 144.0f)];
+    [button9 setBackgroundColor:colorForColumn3];
+    button1.tag = 2009;
+    
+    [self.scrollView addSubview:imageView];
+    [self.scrollView addSubview:button1];
+    [self.scrollView addSubview:button2];
+    [self.scrollView addSubview:button3];
+    [self.scrollView addSubview:button4];
+    [self.scrollView addSubview:button5];
+    [self.scrollView addSubview:button6];
+    [self.scrollView addSubview:button7];
+    [self.scrollView addSubview:button8];
+    [self.scrollView addSubview:button9];
 }
 
 - (void)addActionsToButtons
@@ -132,6 +206,16 @@
 - (void)backToHome:(UIStoryboardSegue *)segue
 {
 
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    self.tabBarController.tabBar.hidden = YES;
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 @end
