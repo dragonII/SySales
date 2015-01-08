@@ -29,6 +29,12 @@
 		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
 		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
 		2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */; };
+		2FD1F71A1A5E210D00F5B9F3 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */; };
+		2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */; };
+		2FD1F7201A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */; };
+		2FD1F7221A5E258D00F5B9F3 /* AppItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */; };
+		2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */; };
+		2FD1F7271A5E28B800F5B9F3 /* AppItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,15 @@
 		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 		2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainTabsViewController.h; sourceTree = "<group>"; };
 		2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainTabsViewController.m; sourceTree = "<group>"; };
+		2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
+		2FD1F71B1A5E21E700F5B9F3 /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
+		2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
+		2FD1F71E1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppItemCell.xib; sourceTree = "<group>"; };
+		2FD1F7231A5E25D900F5B9F3 /* ApplicationItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationItemViewCell.h; sourceTree = "<group>"; };
+		2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationItemViewCell.m; sourceTree = "<group>"; };
+		2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppItems.plist; sourceTree = "<group>"; };
 		930EDF6CE772C34A8E9B33C9 /* Pods-SySales.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SySales.release.xcconfig"; path = "Pods/Target Support Files/Pods-SySales/Pods-SySales.release.xcconfig"; sourceTree = "<group>"; };
 		A4AC9A3EA3FFD5C9372F735D /* libPods-SySales.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SySales.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,7 +124,8 @@
 		2F824F851A2448F800C037B6 = {
 			isa = PBXGroup;
 			children = (
-				2F824F971A2448F800C037B6 /* SySales */,
+				2FD1F7181A5E20E400F5B9F3 /* SySales */,
+				2F824F971A2448F800C037B6 /* SySales_Old */,
 				2F824FB61A2448F900C037B6 /* SySalesTests */,
 				2F824F901A2448F800C037B6 /* Frameworks */,
 				2F824F8F1A2448F800C037B6 /* Products */,
@@ -138,7 +154,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F824F971A2448F800C037B6 /* SySales */ = {
+		2F824F971A2448F800C037B6 /* SySales_Old */ = {
 			isa = PBXGroup;
 			children = (
 				2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */,
@@ -161,6 +177,7 @@
 				2F824FA91A2448F900C037B6 /* Images.xcassets */,
 				2F824F981A2448F900C037B6 /* Supporting Files */,
 			);
+			name = SySales_Old;
 			path = SySales;
 			sourceTree = "<group>";
 		};
@@ -192,6 +209,22 @@
 				2F824FB91A2448F900C037B6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2FD1F7181A5E20E400F5B9F3 /* SySales */ = {
+			isa = PBXGroup;
+			children = (
+				2FD1F71E1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.h */,
+				2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */,
+				2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */,
+				2FD1F71B1A5E21E700F5B9F3 /* ApplicationViewController.h */,
+				2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */,
+				2FD1F7231A5E25D900F5B9F3 /* ApplicationItemViewCell.h */,
+				2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */,
+				2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */,
+				2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */,
+			);
+			name = SySales;
 			sourceTree = "<group>";
 		};
 		8F0E445386DCB94678EFBC6A /* Pods */ = {
@@ -287,6 +320,9 @@
 				2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */,
 				2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */,
 				2F824F9C1A2448F900C037B6 /* InfoPlist.strings in Resources */,
+				2FD1F7221A5E258D00F5B9F3 /* AppItemCell.xib in Resources */,
+				2FD1F71A1A5E210D00F5B9F3 /* iPhone.storyboard in Resources */,
+				2FD1F7271A5E28B800F5B9F3 /* AppItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +379,12 @@
 				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
 				2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */,
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,
+				2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */,
+				2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */,
 				2F824F9E1A2448F900C037B6 /* main.m in Sources */,
 				2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */,
 				2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */,
+				2FD1F7201A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
