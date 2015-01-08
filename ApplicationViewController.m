@@ -9,6 +9,7 @@
 #import "ApplicationViewController.h"
 #import "CHTCollectionViewWaterfallLayout.h"
 #import "ApplicationItemViewCell.h"
+#import "ApplicationPageViewController.h"
 
 static int StatusBarHeight = 20;
 static int NavigationBarHeight = 44;
@@ -20,6 +21,7 @@ static NSString *CellIdentifier = @"ItemViewCellIdentifier";
 
 @property (strong, nonatomic) UICollectionView *itemsCollectionView;
 @property (strong, nonatomic) NSArray *appItemList;
+@property (nonatomic) NSInteger selectedAppIndex;
 
 @end
 
@@ -120,11 +122,19 @@ static NSString *CellIdentifier = @"ItemViewCellIdentifier";
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ApplicationPageViewController *appPageVC = (ApplicationPageViewController *)segue.destinationViewController;
+    NSDictionary *dict = [self.appItemList objectAtIndex:self.selectedAppIndex];
+    NSString *url = [dict objectForKey:@"url"];
+    appPageVC.urlString = url;
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //ApplicationItemViewCell *cell = (ApplicationItemViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    self.selectedAppIndex = indexPath.row;
     
-    //NSLog(@"origin: (%.0f, %.0f); size: (%.0f, %.0f)", cell.frame.origin.x, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
     [self performSegueWithIdentifier:@"GotoAppByUrl" sender:self];
 }
 

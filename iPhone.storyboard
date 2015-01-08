@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="1079" y="-280"/>
         </scene>
-        <!--View Controller-->
+        <!--Application Page View Controller-->
         <scene sceneID="rM3-TR-WCn">
             <objects>
-                <viewController id="MI4-MV-jsa" sceneMemberID="viewController">
+                <viewController id="MI4-MV-jsa" customClass="ApplicationPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5G0-II-NPk"/>
                         <viewControllerLayoutGuide type="bottom" id="SjY-N5-WvE"/>
@@ -47,6 +47,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6nk-Je-1Nu"/>
+                    <connections>
+                        <outlet property="webView" destination="WkS-Y3-fcG" id="Di0-Eq-ePa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sw1-M4-e4R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,7 +59,7 @@
         <scene sceneID="lp7-Sp-Pzk">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="tcS-ol-mHl" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="kaz-2z-y2t">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

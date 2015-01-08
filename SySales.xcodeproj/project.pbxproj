@@ -11,6 +11,7 @@
 		2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */; };
 		2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */; };
 		2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0EFEDA1A30A8CD0024EE9B /* PTRXHomeTabViewController.m */; };
+		2F611B8D1A5E6FEE00211F21 /* ApplicationPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F611B8C1A5E6FEE00211F21 /* ApplicationPageViewController.m */; };
 		2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */; };
 		2F824F921A2448F800C037B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F911A2448F800C037B6 /* Foundation.framework */; };
 		2F824F941A2448F800C037B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F931A2448F800C037B6 /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXDetailForHomePageViewController.m; sourceTree = "<group>"; };
 		2F0EFED91A30A8CD0024EE9B /* PTRXHomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXHomeTabViewController.h; sourceTree = "<group>"; };
 		2F0EFEDA1A30A8CD0024EE9B /* PTRXHomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXHomeTabViewController.m; sourceTree = "<group>"; };
+		2F611B8B1A5E6FED00211F21 /* ApplicationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationPageViewController.h; sourceTree = "<group>"; };
+		2F611B8C1A5E6FEE00211F21 /* ApplicationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationPageViewController.m; sourceTree = "<group>"; };
 		2F645FC11A2E13FF00B6D355 /* PTRXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXConstants.h; sourceTree = "<group>"; };
 		2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXConstants.m; sourceTree = "<group>"; };
 		2F824F8E1A2448F800C037B6 /* SySales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SySales.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +222,8 @@
 				2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */,
 				2FD1F71B1A5E21E700F5B9F3 /* ApplicationViewController.h */,
 				2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */,
+				2F611B8B1A5E6FED00211F21 /* ApplicationPageViewController.h */,
+				2F611B8C1A5E6FEE00211F21 /* ApplicationPageViewController.m */,
 				2FD1F7231A5E25D900F5B9F3 /* ApplicationItemViewCell.h */,
 				2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */,
 				2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */,
@@ -379,6 +384,7 @@
 				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
 				2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */,
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,
+				2F611B8D1A5E6FEE00211F21 /* ApplicationPageViewController.m in Sources */,
 				2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */,
 				2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */,
 				2F824F9E1A2448F900C037B6 /* main.m in Sources */,

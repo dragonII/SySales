@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>url</key>
-		<string>http://scs3.syslive.cn</string>
+		<string>http://scs3.syslive.cn/mb/projects/projectlist.ds</string>
 		<key>img</key>
 		<string></string>
 		<key>description</key>
@@ -24,33 +24,43 @@
 	</dict>
 	<dict>
 		<key>url</key>
-		<string></string>
+		<string>http://scs3.syslive.cn/mb/organization/zuzhilist.ds</string>
 		<key>img</key>
 		<string></string>
 		<key>description</key>
-		<string>Sales</string>
+		<string>Organization</string>
 		<key>name</key>
-		<string>销售</string>
+		<string>组织</string>
 	</dict>
 	<dict>
 		<key>url</key>
-		<string></string>
+		<string>http://scs3.syslive.cn/mb/jixiao/Customermaintenance_tj.ds</string>
 		<key>img</key>
 		<string></string>
 		<key>description</key>
-		<string></string>
+		<string>Performance</string>
 		<key>name</key>
-		<string>待定</string>
+		<string>绩效？</string>
 	</dict>
 	<dict>
 		<key>url</key>
-		<string></string>
+		<string>http://scs3.syslive.cn/mb/channels/channels_contact/contact.ds</string>
 		<key>img</key>
 		<string></string>
 		<key>description</key>
-		<string>test</string>
+		<string>Contacts</string>
 		<key>name</key>
-		<string>测试</string>
+		<string>联络</string>
+	</dict>
+	<dict>
+		<key>url</key>
+		<string>http://scs3.syslive.cn/mb/channels/enterprise_channels/all_channels.ds</string>
+		<key>img</key>
+		<string></string>
+		<key>description</key>
+		<string>Channels</string>
+		<key>name</key>
+		<string>渠道</string>
 	</dict>
 </array>
 </plist>
