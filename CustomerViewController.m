@@ -68,8 +68,8 @@
 {
     [super viewWillAppear:animated];
     
-    NSUInteger index = [self.tabBarController.tabBar.items indexOfObject:self.tabBarController.tabBar.selectedItem];
-    NSLog(@"Index: %d", index);
+    //NSUInteger index = [self.tabBarController.tabBar.items indexOfObject:self.tabBarController.tabBar.selectedItem];
+    //NSLog(@"Index: %d", index);
     
     [self.webView loadRequest:[self getURLRequest]];
 }
