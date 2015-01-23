@@ -30,6 +30,10 @@
 		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
 		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
 		2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */; };
+		2FC4DF641A723C0E00D195DA /* URLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FC4DF631A723C0E00D195DA /* URLs.plist */; };
+		2FC4DF671A723E8000D195DA /* CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4DF661A723E8000D195DA /* CustomerViewController.m */; };
+		2FC4DF6A1A72479700D195DA /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4DF691A72479700D195DA /* ProjectViewController.m */; };
+		2FC4DF6D1A7247A500D195DA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4DF6C1A7247A500D195DA /* MessageViewController.m */; };
 		2FD1F71A1A5E210D00F5B9F3 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */; };
 		2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */; };
 		2FD1F7201A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */; };
@@ -68,9 +72,9 @@
 		2F824F9B1A2448F900C037B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F824F9D1A2448F900C037B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F824F9F1A2448F900C037B6 /* SySales-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SySales-Prefix.pch"; sourceTree = "<group>"; };
-		2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTRXAppDelegate.h; sourceTree = "<group>"; };
-		2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTRXAppDelegate.m; sourceTree = "<group>"; };
-		2F824FA91A2448F900C037B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTRXAppDelegate.h; path = SySales/PTRXAppDelegate.h; sourceTree = "<group>"; };
+		2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTRXAppDelegate.m; path = SySales/PTRXAppDelegate.m; sourceTree = "<group>"; };
+		2F824FA91A2448F900C037B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SySales/Images.xcassets; sourceTree = "<group>"; };
 		2F824FAF1A2448F900C037B6 /* SySalesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SySalesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F824FB01A2448F900C037B6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2F824FB81A2448F900C037B6 /* SySalesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SySalesTests-Info.plist"; sourceTree = "<group>"; };
@@ -86,6 +90,13 @@
 		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 		2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainTabsViewController.h; sourceTree = "<group>"; };
 		2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainTabsViewController.m; sourceTree = "<group>"; };
+		2FC4DF631A723C0E00D195DA /* URLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URLs.plist; sourceTree = "<group>"; };
+		2FC4DF651A723E8000D195DA /* CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerViewController.h; sourceTree = "<group>"; };
+		2FC4DF661A723E8000D195DA /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
+		2FC4DF681A72479700D195DA /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		2FC4DF691A72479700D195DA /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
+		2FC4DF6B1A7247A500D195DA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		2FC4DF6C1A7247A500D195DA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		2FD1F71B1A5E21E700F5B9F3 /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
 		2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
@@ -127,6 +138,9 @@
 		2F824F851A2448F800C037B6 = {
 			isa = PBXGroup;
 			children = (
+				2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */,
+				2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */,
+				2F824FA91A2448F900C037B6 /* Images.xcassets */,
 				2FD1F7181A5E20E400F5B9F3 /* SySales */,
 				2F824F971A2448F800C037B6 /* SySales_Old */,
 				2F824FB61A2448F900C037B6 /* SySalesTests */,
@@ -160,8 +174,6 @@
 		2F824F971A2448F800C037B6 /* SySales_Old */ = {
 			isa = PBXGroup;
 			children = (
-				2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */,
-				2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */,
 				2F645FC11A2E13FF00B6D355 /* PTRXConstants.h */,
 				2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */,
 				2F824FC81A2449C500C037B6 /* PTRXWizardViewController.h */,
@@ -177,7 +189,6 @@
 				2F0EFED61A30A86F0024EE9B /* PTRXDetailForHomePageViewController.h */,
 				2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */,
 				2F824FC61A24498600C037B6 /* MainView.storyboard */,
-				2F824FA91A2448F900C037B6 /* Images.xcassets */,
 				2F824F981A2448F900C037B6 /* Supporting Files */,
 			);
 			name = SySales_Old;
@@ -228,6 +239,13 @@
 				2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */,
 				2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */,
 				2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */,
+				2FC4DF631A723C0E00D195DA /* URLs.plist */,
+				2FC4DF651A723E8000D195DA /* CustomerViewController.h */,
+				2FC4DF661A723E8000D195DA /* CustomerViewController.m */,
+				2FC4DF681A72479700D195DA /* ProjectViewController.h */,
+				2FC4DF691A72479700D195DA /* ProjectViewController.m */,
+				2FC4DF6B1A7247A500D195DA /* MessageViewController.h */,
+				2FC4DF6C1A7247A500D195DA /* MessageViewController.m */,
 			);
 			name = SySales;
 			sourceTree = "<group>";
@@ -291,6 +309,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Wang Long";
 				TargetAttributes = {
+					2F824F8D1A2448F800C037B6 = {
+						DevelopmentTeam = E99HD65J5U;
+					};
 					2F824FAE1A2448F900C037B6 = {
 						TestTargetID = 2F824F8D1A2448F800C037B6;
 					};
@@ -323,6 +344,7 @@
 			files = (
 				2F824FAA1A2448F900C037B6 /* Images.xcassets in Resources */,
 				2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */,
+				2FC4DF641A723C0E00D195DA /* URLs.plist in Resources */,
 				2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */,
 				2F824F9C1A2448F900C037B6 /* InfoPlist.strings in Resources */,
 				2FD1F7221A5E258D00F5B9F3 /* AppItemCell.xib in Resources */,
@@ -379,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC4DF671A723E8000D195DA /* CustomerViewController.m in Sources */,
 				2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */,
 				2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */,
 				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
@@ -386,11 +409,13 @@
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,
 				2F611B8D1A5E6FEE00211F21 /* ApplicationPageViewController.m in Sources */,
 				2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */,
+				2FC4DF6D1A7247A500D195DA /* MessageViewController.m in Sources */,
 				2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */,
 				2F824F9E1A2448F900C037B6 /* main.m in Sources */,
 				2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */,
 				2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */,
 				2FD1F7201A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m in Sources */,
+				2FC4DF6A1A72479700D195DA /* ProjectViewController.m in Sources */,
 				2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,10 +538,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SySales/SySales-Prefix.pch";
 				INFOPLIST_FILE = "SySales/SySales-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -527,10 +555,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SySales/SySales-Prefix.pch";
 				INFOPLIST_FILE = "SySales/SySales-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

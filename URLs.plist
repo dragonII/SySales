@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>url</key>
+		<string>http://scs3.syslive.cn/mb/customer/customerlist.ds</string>
+		<key>description</key>
+		<string>客户</string>
+	</dict>
+	<dict>
+		<key>url</key>
+		<string>http://scs3.syslive.cn/mb/project/projectlist.ds</string>
+		<key>description</key>
+		<string>项目</string>
+	</dict>
+	<dict>
+		<key>url</key>
+		<string>http://scs3.syslive.cn/mb/FollowForm/FollowForm_list.ds</string>
+		<key>description</key>
+		<string>消息</string>
+	</dict>
+</array>
+</plist>
