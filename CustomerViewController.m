@@ -67,9 +67,38 @@
     return request;
 }
 
+- (void)webViewGoBack:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    NSLog(@"canGoBack: %hhd", self.webView.canGoBack);
+    [self.webView goBack];
+}
+
+- (void)webViewGoForward:(UISwipeGestureRecognizer *)gestureRecognizer
+{
+    NSLog(@"canGoForward: %hhd", self.webView.canGoForward);
+    [self.webView goForward];
+}
+
+- (void)initWebView
+{
+    UISwipeGestureRecognizer* swipeLeftGeture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(webViewGoForward:)];
+    
+    swipeLeftGeture.direction = UISwipeGestureRecognizerDirectionLeft;
+    
+    [self.webView addGestureRecognizer:swipeLeftGeture];
+    
+    UISwipeGestureRecognizer* swipeRightGeture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(webViewGoBack:)];
+    
+    swipeRightGeture.direction=UISwipeGestureRecognizerDirectionRight;
+    
+    [self.webView addGestureRecognizer:swipeRightGeture];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self initWebView];
 	
     self.webView.delegate = self;
     
