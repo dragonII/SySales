@@ -45,6 +45,16 @@
     [[self.view viewWithTag:1000] removeFromSuperview];
 }
 
+- (void)showNetworkActivityIndicator
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+}
+
+- (void)hideNetworkActivityIndicator
+{
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+}
+
 - (NSURLRequest *)getURLRequest
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"URLs" ofType:@"plist"];
@@ -62,6 +72,9 @@
     [super viewDidLoad];
 	
     self.webView.delegate = self;
+    
+    //NSLog(@"ViewDidLoad: %@", self);
+    [self.webView loadRequest:[self getURLRequest]];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -71,17 +84,19 @@
     //NSUInteger index = [self.tabBarController.tabBar.items indexOfObject:self.tabBarController.tabBar.selectedItem];
     //NSLog(@"Index: %d", index);
     
-    [self.webView loadRequest:[self getURLRequest]];
+    //[self.webView loadRequest:[self getURLRequest]];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    [self showSpinner];
+    //[self showSpinner];
+    [self showNetworkActivityIndicator];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [self hideSpinner];
+    //[self hideSpinner];
+    [self hideNetworkActivityIndicator];
 }
 
 - (void)didReceiveMemoryWarning
