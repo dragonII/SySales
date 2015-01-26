@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="eT9-Jg-ufz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="EnN-Jt-v1l">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -171,6 +171,96 @@
             </objects>
             <point key="canvasLocation" x="661" y="1250"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Cil-Ag-eXd">
+            <objects>
+                <viewController id="EnN-Jt-v1l" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rjU-ZF-gMo"/>
+                        <viewControllerLayoutGuide type="bottom" id="3N6-Lr-r1T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5rm-ek-XPV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="syslive" translatesAutoresizingMaskIntoConstraints="NO" id="eVq-LS-w8U">
+                                <rect key="frame" x="79" y="126" width="163" height="51"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="163" id="Xcy-Ai-dfT"/>
+                                    <constraint firstAttribute="height" constant="51" id="vbi-Or-j0a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO4-ir-v0j">
+                                <rect key="frame" x="18" y="298.5" width="284" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.9882352941176471" green="0.39215686274509803" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="登录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iyN-8a-bal">
+                                <rect key="frame" x="18" y="249" width="284" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Password" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-n6-RJH">
+                                        <rect key="frame" x="10" y="9" width="17" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-Dq-AMf">
+                                        <rect key="frame" x="35" y="1.5" width="229" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="join" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldEndEditing:" destination="EnN-Jt-v1l" eventType="editingDidEndOnExit" id="oN3-ZS-YLB"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LW0-5A-Ijp">
+                                <rect key="frame" x="18" y="199" width="284" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Account" translatesAutoresizingMaskIntoConstraints="NO" id="I7x-bX-Tpx">
+                                        <rect key="frame" x="10" y="9" width="17" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xXc-PC-xsu">
+                                        <rect key="frame" x="35" y="0.5" width="229" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <action selector="textFieldEndEditing:" destination="EnN-Jt-v1l" eventType="editingDidEndOnExit" id="H9T-N7-Iqj"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eVq-LS-w8U" firstAttribute="top" secondItem="rjU-ZF-gMo" secondAttribute="bottom" constant="106" id="0cl-KI-RIv"/>
+                            <constraint firstAttribute="centerX" secondItem="eVq-LS-w8U" secondAttribute="centerX" id="J1i-jn-RTZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accountBackgroundView" destination="LW0-5A-Ijp" id="mtu-aH-Oot"/>
+                        <outlet property="accountTextField" destination="xXc-PC-xsu" id="F9t-SC-hU5"/>
+                        <outlet property="loginButton" destination="AO4-ir-v0j" id="Fyx-Zs-rSP"/>
+                        <outlet property="passwordBackgroundView" destination="iyN-8a-bal" id="Fpm-Pk-xcR"/>
+                        <outlet property="passwordTextField" destination="8ie-Dq-AMf" id="Eky-om-bXG"/>
+                        <segue destination="eT9-Jg-ufz" kind="modal" identifier="ShowContentTabsSegue" id="33p-EJ-mV8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qnc-Ef-qIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="1576"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5JB-bb-ShL">
             <objects>
@@ -284,10 +374,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Account" width="17" height="17"/>
         <image name="Customer" width="30" height="30"/>
         <image name="Me" width="30" height="30"/>
         <image name="Message" width="30" height="30"/>
+        <image name="Password" width="17" height="17"/>
         <image name="Project" width="30" height="30"/>
+        <image name="syslive" width="163" height="51"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
