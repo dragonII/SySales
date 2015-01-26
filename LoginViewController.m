@@ -54,6 +54,7 @@ static NSString *LockedAccount = @"<rest name=\"rest\">3</rest>";
     NSDictionary *dict = [AppPreference loadUserNameAndPassword];
     if(dict != nil)
     {
+#warning 需要添加key值的判断，确定是否含有username的key word
         self.accountTextField.text = dict[@"username"];
     }
 }
