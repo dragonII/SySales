@@ -98,7 +98,8 @@ static NSString *LockedAccount = @"<rest name=\"rest\">3</rest>";
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     spinner.color = [UIColor grayColor];
     
-    spinner.center = CGPointMake(CGRectGetMidX(self.view.bounds) + 0.5f, CGRectGetMidY(self.view.bounds) + 0.5f);
+    //spinner.center = CGPointMake(CGRectGetMidX(self.view.bounds) + 0.5f, CGRectGetMidY(self.view.bounds) + 0.5f);
+    spinner.center = CGPointMake(CGRectGetMidX(self.view.bounds) + 0.5f, self.loginButton.frame.origin.y + 90);
     
     spinner.tag = 1000;
     [self.view addSubview:spinner];
