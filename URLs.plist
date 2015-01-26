@@ -4,6 +4,12 @@
 <array>
 	<dict>
 		<key>url</key>
+		<string>http://scs3.syslive.cn/interface_mb/login_mb/login.ds</string>
+		<key>description</key>
+		<string>login</string>
+	</dict>
+	<dict>
+		<key>url</key>
 		<string>http://scs3.syslive.cn/mb/customer/customerlist.ds</string>
 		<key>description</key>
 		<string>客户</string>

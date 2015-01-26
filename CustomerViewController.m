@@ -59,7 +59,7 @@
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"URLs" ofType:@"plist"];
     self.urlArray = [NSArray arrayWithContentsOfFile:path];
-    NSString *urlString = (NSString *)[[self.urlArray objectAtIndex:0] objectForKey:@"url"];
+    NSString *urlString = (NSString *)[[self.urlArray objectAtIndex:1] objectForKey:@"url"];
     NSLog(@"urlString: %@", urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -69,13 +69,13 @@
 
 - (void)webViewGoBack:(UISwipeGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"canGoBack: %hhd", self.webView.canGoBack);
+    //NSLog(@"canGoBack: %hhd", self.webView.canGoBack);
     [self.webView goBack];
 }
 
 - (void)webViewGoForward:(UISwipeGestureRecognizer *)gestureRecognizer
 {
-    NSLog(@"canGoForward: %hhd", self.webView.canGoForward);
+    //NSLog(@"canGoForward: %hhd", self.webView.canGoForward);
     [self.webView goForward];
 }
 

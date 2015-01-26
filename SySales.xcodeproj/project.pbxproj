@@ -29,6 +29,7 @@
 		2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */; };
 		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
 		2F9E975D1A75EB580075A930 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E975C1A75EB580075A930 /* LoginViewController.m */; };
+		2F9E97601A7613A10075A930 /* AppPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E975F1A7613A10075A930 /* AppPreference.m */; };
 		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
 		2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */; };
 		2FC4DF641A723C0E00D195DA /* URLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FC4DF631A723C0E00D195DA /* URLs.plist */; };
@@ -88,6 +89,8 @@
 		2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXLoginViewController.m; sourceTree = "<group>"; };
 		2F9E975B1A75EB580075A930 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2F9E975C1A75EB580075A930 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		2F9E975E1A7613A10075A930 /* AppPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreference.h; sourceTree = "<group>"; };
+		2F9E975F1A7613A10075A930 /* AppPreference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppPreference.m; sourceTree = "<group>"; };
 		2FB07B8A1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8B1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
@@ -243,6 +246,8 @@
 				2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */,
 				2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */,
 				2FC4DF631A723C0E00D195DA /* URLs.plist */,
+				2F9E975E1A7613A10075A930 /* AppPreference.h */,
+				2F9E975F1A7613A10075A930 /* AppPreference.m */,
 				2F9E975B1A75EB580075A930 /* LoginViewController.h */,
 				2F9E975C1A75EB580075A930 /* LoginViewController.m */,
 				2FC4DF651A723E8000D195DA /* CustomerViewController.h */,
@@ -408,6 +413,7 @@
 			files = (
 				2FC4DF671A723E8000D195DA /* CustomerViewController.m in Sources */,
 				2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */,
+				2F9E97601A7613A10075A930 /* AppPreference.m in Sources */,
 				2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */,
 				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
 				2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */,
