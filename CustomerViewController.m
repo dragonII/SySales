@@ -103,6 +103,7 @@
     self.webView.delegate = self;
     
     //NSLog(@"ViewDidLoad: %@", self);
+    self.webView.scalesPageToFit = YES;
     [self.webView loadRequest:[self getURLRequest]];
 }
 

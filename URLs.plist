@@ -26,5 +26,11 @@
 		<key>description</key>
 		<string>消息</string>
 	</dict>
+	<dict>
+		<key>url</key>
+		<string>http://scs3.syslive.cn/mb/aboutme.ds</string>
+		<key>description</key>
+		<string>个人</string>
+	</dict>
 </array>
 </plist>

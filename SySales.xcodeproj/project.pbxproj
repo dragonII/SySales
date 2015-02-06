@@ -42,6 +42,7 @@
 		2FD1F7221A5E258D00F5B9F3 /* AppItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */; };
 		2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */; };
 		2FD1F7271A5E28B800F5B9F3 /* AppItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */; };
+		2FFEC5351A8469360091C450 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFEC5341A8469360091C450 /* AboutMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		2FD1F7231A5E25D900F5B9F3 /* ApplicationItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationItemViewCell.h; sourceTree = "<group>"; };
 		2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationItemViewCell.m; sourceTree = "<group>"; };
 		2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppItems.plist; sourceTree = "<group>"; };
+		2FFEC5331A8469360091C450 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
+		2FFEC5341A8469360091C450 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
 		930EDF6CE772C34A8E9B33C9 /* Pods-SySales.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SySales.release.xcconfig"; path = "Pods/Target Support Files/Pods-SySales/Pods-SySales.release.xcconfig"; sourceTree = "<group>"; };
 		A4AC9A3EA3FFD5C9372F735D /* libPods-SySales.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SySales.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -256,6 +259,8 @@
 				2FC4DF691A72479700D195DA /* ProjectViewController.m */,
 				2FC4DF6B1A7247A500D195DA /* MessageViewController.h */,
 				2FC4DF6C1A7247A500D195DA /* MessageViewController.m */,
+				2FFEC5331A8469360091C450 /* AboutMeViewController.h */,
+				2FFEC5341A8469360091C450 /* AboutMeViewController.m */,
 			);
 			name = SySales;
 			sourceTree = "<group>";
@@ -316,7 +321,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PTRX;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Wang Long";
 				TargetAttributes = {
 					2F824F8D1A2448F800C037B6 = {
@@ -414,6 +419,7 @@
 				2FC4DF671A723E8000D195DA /* CustomerViewController.m in Sources */,
 				2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */,
 				2F9E97601A7613A10075A930 /* AppPreference.m in Sources */,
+				2FFEC5351A8469360091C450 /* AboutMeViewController.m in Sources */,
 				2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */,
 				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
 				2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */,
@@ -476,7 +482,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -515,7 +520,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -549,12 +553,13 @@
 			baseConfigurationReference = 0E0289E95E317597283617BC /* Pods-SySales.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SySales/SySales-Prefix.pch";
 				INFOPLIST_FILE = "SySales/SySales-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -566,12 +571,13 @@
 			baseConfigurationReference = 930EDF6CE772C34A8E9B33C9 /* Pods-SySales.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SySales/SySales-Prefix.pch";
 				INFOPLIST_FILE = "SySales/SySales-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -581,7 +587,6 @@
 		2F824FC41A2448F900C037B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SySales.app/SySales";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -604,7 +609,6 @@
 		2F824FC51A2448F900C037B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SySales.app/SySales";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
