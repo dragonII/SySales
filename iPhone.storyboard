@@ -121,8 +121,11 @@
                                     <constraint firstAttribute="width" constant="284" id="mKh-Yj-Zfi"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="思莱系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9t-4A-nFi">
-                                <rect key="frame" x="126" y="527" width="68" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="思莱系统" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9t-4A-nFi">
+                                <rect key="frame" x="16" y="527" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Jwd-ES-0bE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -131,16 +134,15 @@
                         <color key="backgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LW0-5A-Ijp" firstAttribute="top" secondItem="eVq-LS-w8U" secondAttribute="bottom" constant="22" id="8ce-aW-WL4"/>
+                            <constraint firstItem="Z9t-4A-nFi" firstAttribute="trailing" secondItem="5rm-ek-XPV" secondAttribute="trailingMargin" id="9d5-cw-Vhq"/>
                             <constraint firstItem="AO4-ir-v0j" firstAttribute="top" secondItem="iyN-8a-bal" secondAttribute="bottom" constant="14.5" id="Fck-aO-vDs"/>
                             <constraint firstItem="eVq-LS-w8U" firstAttribute="top" secondItem="rjU-ZF-gMo" secondAttribute="bottom" constant="29" id="Kh8-Jp-8uL"/>
-                            <constraint firstItem="Z9t-4A-nFi" firstAttribute="leading" secondItem="5rm-ek-XPV" secondAttribute="leading" constant="126" id="M5V-Lm-qwA"/>
                             <constraint firstAttribute="centerX" secondItem="iyN-8a-bal" secondAttribute="centerX" id="PCS-Y3-81f"/>
-                            <constraint firstAttribute="centerX" secondItem="Z9t-4A-nFi" secondAttribute="centerX" id="V62-e4-Cfa"/>
-                            <constraint firstItem="3N6-Lr-r1T" firstAttribute="top" secondItem="Z9t-4A-nFi" secondAttribute="bottom" constant="20" id="XcP-QB-gg4"/>
                             <constraint firstAttribute="centerX" secondItem="eVq-LS-w8U" secondAttribute="centerX" id="Z8I-f3-Otp"/>
+                            <constraint firstItem="Z9t-4A-nFi" firstAttribute="leading" secondItem="5rm-ek-XPV" secondAttribute="leadingMargin" id="df6-B9-G5m"/>
                             <constraint firstAttribute="centerX" secondItem="AO4-ir-v0j" secondAttribute="centerX" id="dsk-nh-Pl5"/>
+                            <constraint firstItem="3N6-Lr-r1T" firstAttribute="top" secondItem="Z9t-4A-nFi" secondAttribute="bottom" constant="20" id="hA0-dw-JBr"/>
                             <constraint firstAttribute="centerX" secondItem="LW0-5A-Ijp" secondAttribute="centerX" id="nDa-Ce-z46"/>
-                            <constraint firstAttribute="trailing" secondItem="Z9t-4A-nFi" secondAttribute="trailing" constant="126" id="oYf-mI-wgh"/>
                             <constraint firstItem="iyN-8a-bal" firstAttribute="top" secondItem="LW0-5A-Ijp" secondAttribute="bottom" constant="12" id="wjb-PC-uSA"/>
                         </constraints>
                     </view>
