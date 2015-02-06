@@ -60,7 +60,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"URLs" ofType:@"plist"];
     self.urlArray = [NSArray arrayWithContentsOfFile:path];
     NSString *urlString = (NSString *)[[self.urlArray objectAtIndex:1] objectForKey:@"url"];
-    NSLog(@"urlString: %@", urlString);
+    //NSLog(@"urlString: %@", urlString);
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
