@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D71A77A0BE848ED8E48429E /* libPods-SySales.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4AC9A3EA3FFD5C9372F735D /* libPods-SySales.a */; };
-		2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */; };
-		2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */; };
-		2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F0EFEDA1A30A8CD0024EE9B /* PTRXHomeTabViewController.m */; };
-		2F611B8D1A5E6FEE00211F21 /* ApplicationPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F611B8C1A5E6FEE00211F21 /* ApplicationPageViewController.m */; };
-		2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */; };
 		2F824F921A2448F800C037B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F911A2448F800C037B6 /* Foundation.framework */; };
 		2F824F941A2448F800C037B6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F931A2448F800C037B6 /* CoreGraphics.framework */; };
 		2F824F961A2448F800C037B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F951A2448F800C037B6 /* UIKit.framework */; };
@@ -25,23 +20,14 @@
 		2F824FB31A2448F900C037B6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F824F951A2448F800C037B6 /* UIKit.framework */; };
 		2F824FBB1A2448F900C037B6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FB91A2448F900C037B6 /* InfoPlist.strings */; };
 		2F824FBD1A2448F900C037B6 /* SySalesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FBC1A2448F900C037B6 /* SySalesTests.m */; };
-		2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F824FC61A24498600C037B6 /* MainView.storyboard */; };
-		2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */; };
-		2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */; };
 		2F9E975D1A75EB580075A930 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E975C1A75EB580075A930 /* LoginViewController.m */; };
 		2F9E97601A7613A10075A930 /* AppPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9E975F1A7613A10075A930 /* AppPreference.m */; };
 		2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */; };
-		2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */; };
 		2FC4DF641A723C0E00D195DA /* URLs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FC4DF631A723C0E00D195DA /* URLs.plist */; };
 		2FC4DF671A723E8000D195DA /* CustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4DF661A723E8000D195DA /* CustomerViewController.m */; };
 		2FC4DF6A1A72479700D195DA /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4DF691A72479700D195DA /* ProjectViewController.m */; };
 		2FC4DF6D1A7247A500D195DA /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC4DF6C1A7247A500D195DA /* MessageViewController.m */; };
 		2FD1F71A1A5E210D00F5B9F3 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */; };
-		2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */; };
-		2FD1F7201A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */; };
-		2FD1F7221A5E258D00F5B9F3 /* AppItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */; };
-		2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */; };
-		2FD1F7271A5E28B800F5B9F3 /* AppItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */; };
 		2FFEC5351A8469360091C450 /* AboutMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FFEC5341A8469360091C450 /* AboutMeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -57,16 +43,6 @@
 
 /* Begin PBXFileReference section */
 		0E0289E95E317597283617BC /* Pods-SySales.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SySales.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SySales/Pods-SySales.debug.xcconfig"; sourceTree = "<group>"; };
-		2F0CE7B21A28162700E5CDDF /* PTRXDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXDataPersistence.h; sourceTree = "<group>"; };
-		2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXDataPersistence.m; sourceTree = "<group>"; };
-		2F0EFED61A30A86F0024EE9B /* PTRXDetailForHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXDetailForHomePageViewController.h; sourceTree = "<group>"; };
-		2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXDetailForHomePageViewController.m; sourceTree = "<group>"; };
-		2F0EFED91A30A8CD0024EE9B /* PTRXHomeTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXHomeTabViewController.h; sourceTree = "<group>"; };
-		2F0EFEDA1A30A8CD0024EE9B /* PTRXHomeTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXHomeTabViewController.m; sourceTree = "<group>"; };
-		2F611B8B1A5E6FED00211F21 /* ApplicationPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationPageViewController.h; sourceTree = "<group>"; };
-		2F611B8C1A5E6FEE00211F21 /* ApplicationPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationPageViewController.m; sourceTree = "<group>"; };
-		2F645FC11A2E13FF00B6D355 /* PTRXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXConstants.h; sourceTree = "<group>"; };
-		2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXConstants.m; sourceTree = "<group>"; };
 		2F824F8E1A2448F800C037B6 /* SySales.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SySales.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F824F911A2448F800C037B6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2F824F931A2448F800C037B6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,11 +59,6 @@
 		2F824FB81A2448F900C037B6 /* SySalesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SySalesTests-Info.plist"; sourceTree = "<group>"; };
 		2F824FBA1A2448F900C037B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F824FBC1A2448F900C037B6 /* SySalesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SySalesTests.m; sourceTree = "<group>"; };
-		2F824FC61A24498600C037B6 /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
-		2F824FC81A2449C500C037B6 /* PTRXWizardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXWizardViewController.h; sourceTree = "<group>"; };
-		2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXWizardViewController.m; sourceTree = "<group>"; };
-		2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXLoginViewController.h; sourceTree = "<group>"; };
-		2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXLoginViewController.m; sourceTree = "<group>"; };
 		2F9E975B1A75EB580075A930 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		2F9E975C1A75EB580075A930 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		2F9E975E1A7613A10075A930 /* AppPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppPreference.h; sourceTree = "<group>"; };
@@ -95,8 +66,6 @@
 		2FB07B8A1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8B1A245D8E00A5E3F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		2FB07B8C1A245EA300A5E3F8 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
-		2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTRXMainTabsViewController.h; sourceTree = "<group>"; };
-		2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTRXMainTabsViewController.m; sourceTree = "<group>"; };
 		2FC4DF631A723C0E00D195DA /* URLs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URLs.plist; sourceTree = "<group>"; };
 		2FC4DF651A723E8000D195DA /* CustomerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerViewController.h; sourceTree = "<group>"; };
 		2FC4DF661A723E8000D195DA /* CustomerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerViewController.m; sourceTree = "<group>"; };
@@ -105,14 +74,6 @@
 		2FC4DF6B1A7247A500D195DA /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		2FC4DF6C1A7247A500D195DA /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
-		2FD1F71B1A5E21E700F5B9F3 /* ApplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationViewController.h; sourceTree = "<group>"; };
-		2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationViewController.m; sourceTree = "<group>"; };
-		2FD1F71E1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
-		2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
-		2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppItemCell.xib; sourceTree = "<group>"; };
-		2FD1F7231A5E25D900F5B9F3 /* ApplicationItemViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApplicationItemViewCell.h; sourceTree = "<group>"; };
-		2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApplicationItemViewCell.m; sourceTree = "<group>"; };
-		2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AppItems.plist; sourceTree = "<group>"; };
 		2FFEC5331A8469360091C450 /* AboutMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutMeViewController.h; sourceTree = "<group>"; };
 		2FFEC5341A8469360091C450 /* AboutMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutMeViewController.m; sourceTree = "<group>"; };
 		930EDF6CE772C34A8E9B33C9 /* Pods-SySales.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SySales.release.xcconfig"; path = "Pods/Target Support Files/Pods-SySales/Pods-SySales.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,11 +108,11 @@
 		2F824F851A2448F800C037B6 = {
 			isa = PBXGroup;
 			children = (
+				2F824F981A2448F900C037B6 /* Supporting Files */,
 				2F824FA01A2448F900C037B6 /* PTRXAppDelegate.h */,
 				2F824FA11A2448F900C037B6 /* PTRXAppDelegate.m */,
 				2F824FA91A2448F900C037B6 /* Images.xcassets */,
 				2FD1F7181A5E20E400F5B9F3 /* SySales */,
-				2F824F971A2448F800C037B6 /* SySales_Old */,
 				2F824FB61A2448F900C037B6 /* SySalesTests */,
 				2F824F901A2448F800C037B6 /* Frameworks */,
 				2F824F8F1A2448F800C037B6 /* Products */,
@@ -180,30 +141,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F824F971A2448F800C037B6 /* SySales_Old */ = {
-			isa = PBXGroup;
-			children = (
-				2F645FC11A2E13FF00B6D355 /* PTRXConstants.h */,
-				2F645FC21A2E13FF00B6D355 /* PTRXConstants.m */,
-				2F824FC81A2449C500C037B6 /* PTRXWizardViewController.h */,
-				2F824FC91A2449C500C037B6 /* PTRXWizardViewController.m */,
-				2F824FCA1A2449C500C037B6 /* PTRXLoginViewController.h */,
-				2F824FCB1A2449C500C037B6 /* PTRXLoginViewController.m */,
-				2F0CE7B21A28162700E5CDDF /* PTRXDataPersistence.h */,
-				2F0CE7B31A28162700E5CDDF /* PTRXDataPersistence.m */,
-				2FBD7C4D1A309F4900D8BC48 /* PTRXMainTabsViewController.h */,
-				2FBD7C4E1A309F4900D8BC48 /* PTRXMainTabsViewController.m */,
-				2F0EFED91A30A8CD0024EE9B /* PTRXHomeTabViewController.h */,
-				2F0EFEDA1A30A8CD0024EE9B /* PTRXHomeTabViewController.m */,
-				2F0EFED61A30A86F0024EE9B /* PTRXDetailForHomePageViewController.h */,
-				2F0EFED71A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m */,
-				2F824FC61A24498600C037B6 /* MainView.storyboard */,
-				2F824F981A2448F900C037B6 /* Supporting Files */,
-			);
-			name = SySales_Old;
-			path = SySales;
-			sourceTree = "<group>";
-		};
 		2F824F981A2448F900C037B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +151,7 @@
 				2F824F9F1A2448F900C037B6 /* SySales-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = SySales;
 			sourceTree = "<group>";
 		};
 		2F824FB61A2448F900C037B6 /* SySalesTests */ = {
@@ -237,17 +175,7 @@
 		2FD1F7181A5E20E400F5B9F3 /* SySales */ = {
 			isa = PBXGroup;
 			children = (
-				2FD1F71E1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.h */,
-				2FD1F71F1A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m */,
 				2FD1F7191A5E210D00F5B9F3 /* iPhone.storyboard */,
-				2FD1F71B1A5E21E700F5B9F3 /* ApplicationViewController.h */,
-				2FD1F71C1A5E21E700F5B9F3 /* ApplicationViewController.m */,
-				2F611B8B1A5E6FED00211F21 /* ApplicationPageViewController.h */,
-				2F611B8C1A5E6FEE00211F21 /* ApplicationPageViewController.m */,
-				2FD1F7231A5E25D900F5B9F3 /* ApplicationItemViewCell.h */,
-				2FD1F7241A5E25D900F5B9F3 /* ApplicationItemViewCell.m */,
-				2FD1F7211A5E258D00F5B9F3 /* AppItemCell.xib */,
-				2FD1F7261A5E28B800F5B9F3 /* AppItems.plist */,
 				2FC4DF631A723C0E00D195DA /* URLs.plist */,
 				2F9E975E1A7613A10075A930 /* AppPreference.h */,
 				2F9E975F1A7613A10075A930 /* AppPreference.m */,
@@ -360,11 +288,8 @@
 				2F824FAA1A2448F900C037B6 /* Images.xcassets in Resources */,
 				2FB07B8D1A245EA300A5E3F8 /* Localizable.strings in Resources */,
 				2FC4DF641A723C0E00D195DA /* URLs.plist in Resources */,
-				2F824FC71A24498600C037B6 /* MainView.storyboard in Resources */,
 				2F824F9C1A2448F900C037B6 /* InfoPlist.strings in Resources */,
-				2FD1F7221A5E258D00F5B9F3 /* AppItemCell.xib in Resources */,
 				2FD1F71A1A5E210D00F5B9F3 /* iPhone.storyboard in Resources */,
-				2FD1F7271A5E28B800F5B9F3 /* AppItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,24 +342,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FC4DF671A723E8000D195DA /* CustomerViewController.m in Sources */,
-				2F645FC31A2E13FF00B6D355 /* PTRXConstants.m in Sources */,
 				2F9E97601A7613A10075A930 /* AppPreference.m in Sources */,
 				2FFEC5351A8469360091C450 /* AboutMeViewController.m in Sources */,
-				2FBD7C4F1A309F4900D8BC48 /* PTRXMainTabsViewController.m in Sources */,
-				2F0EFEDB1A30A8CD0024EE9B /* PTRXHomeTabViewController.m in Sources */,
-				2F0EFED81A30A86F0024EE9B /* PTRXDetailForHomePageViewController.m in Sources */,
 				2F824FA21A2448F900C037B6 /* PTRXAppDelegate.m in Sources */,
-				2F611B8D1A5E6FEE00211F21 /* ApplicationPageViewController.m in Sources */,
 				2F9E975D1A75EB580075A930 /* LoginViewController.m in Sources */,
-				2FD1F71D1A5E21E700F5B9F3 /* ApplicationViewController.m in Sources */,
 				2FC4DF6D1A7247A500D195DA /* MessageViewController.m in Sources */,
-				2FD1F7251A5E25D900F5B9F3 /* ApplicationItemViewCell.m in Sources */,
 				2F824F9E1A2448F900C037B6 /* main.m in Sources */,
-				2F824FD11A2449C500C037B6 /* PTRXLoginViewController.m in Sources */,
-				2F0CE7B41A28162700E5CDDF /* PTRXDataPersistence.m in Sources */,
-				2FD1F7201A5E221400F5B9F3 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				2FC4DF6A1A72479700D195DA /* ProjectViewController.m in Sources */,
-				2F824FD01A2449C500C037B6 /* PTRXWizardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
